@@ -1,0 +1,20 @@
+# Python temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Machine Learning models (they can be retrained in 2 seconds)
+*.pkl
+
+# Databases (they can be rebuilt using the seeder scripts)
+*.db
+
+# Java Maven build output and portable Maven
+bargain-backend/target/
+bargain-backend/.maven/
+
+# IDE configurations
+.idea/
+.vscode/
+*.iml

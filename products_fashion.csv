@@ -1,0 +1,344 @@
+id,product_name,brand,category,price,original_price,discount_percent,rating,reviews,platform,image_url,product_url
+10001,Wishful Silver High-Low 184,Wishful,Kurtis & Suits,1398,2185,36,3.3,5724,Flipkart Fashion,https://example.com/images/10001.jpg,https://example.com/product/10001
+10002,Anouk Green Patiala 961,Anouk,Kurtis & Suits,1785,5410,67,3.4,47381,Limeroad,https://example.com/images/10002.jpg,https://example.com/product/10002
+10003,Aurelia Orange Embroidered 156,Aurelia,Dresses,5737,7859,27,4.7,22254,Ajio,https://example.com/images/10003.jpg,https://example.com/product/10003
+10004,Joyalukkas Navy Necklace 44,Joyalukkas,Jewellery,33828,35609,5,3.9,23808,Craftsvilla,https://example.com/images/10004.jpg,https://example.com/product/10004
+10005,Joyalukkas Orange Anklet 621,Joyalukkas,Jewellery,54241,60946,11,3.7,14194,Nykaa Fashion,https://example.com/images/10005.jpg,https://example.com/product/10005
+10006,Crunchy Fashion Mustard Layered 677,Crunchy Fashion,Accessories,745,819,9,3.2,11268,Tata Cliq Fashion,https://example.com/images/10006.jpg,https://example.com/product/10006
+10007,Zara Casual A-Line Dress 7,Zara,Dresses,2306,3441,33,3.3,13444,Amazon Fashion,https://example.com/images/10007.jpg,https://example.com/product/10007
+10008,AND Evening Gown 8,AND,Dresses,560,608,8,3.2,30505,Tata Cliq Fashion,https://example.com/images/10008.jpg,https://example.com/product/10008
+10009,W Straight Suit Set 9,W,Kurtis & Suits,4764,11342,58,3.4,77246,Craftsvilla,https://example.com/images/10009.jpg,https://example.com/product/10009
+10010,Anouk Patiala Suit 10,Anouk,Kurtis & Suits,3087,5145,40,3.3,44128,Flipkart Fashion,https://example.com/images/10010.jpg,https://example.com/product/10010
+10011,ONLY Maxi Dress 11,ONLY,Dresses,3240,6352,49,4.2,5705,Amazon Fashion,https://example.com/images/10011.jpg,https://example.com/product/10011
+10012,Hidesign Leather Tote Bag 12,Hidesign,Bags & Handbags,3400,4000,15,4.1,47410,Tata Cliq Fashion,https://example.com/images/10012.jpg,https://example.com/product/10012
+10013,Crunchy Fashion Cat-Eye Sunglasses 13,Crunchy Fashion,Accessories,2166,3734,42,5.0,30522,Ajio,https://example.com/images/10013.jpg,https://example.com/product/10013
+10014,ONLY Casual A-Line Dress 14,ONLY,Dresses,4014,8191,51,3.3,46576,Limeroad,https://example.com/images/10014.jpg,https://example.com/product/10014
+10015,Nike Running Shoes 15,Nike,Footwear,1701,6300,73,4.5,21427,Nykaa Fashion,https://example.com/images/10015.jpg,https://example.com/product/10015
+10016,Sonata Stainless Steel Watch 16,Sonata,Watches,8196,15177,46,4.7,7341,Limeroad,https://example.com/images/10016.jpg,https://example.com/product/10016
+10017,Aurelia Patiala Suit 17,Aurelia,Kurtis & Suits,2493,2865,13,3.4,74351,Amazon Fashion,https://example.com/images/10017.jpg,https://example.com/product/10017
+10018,Nalli Kanchipuram Silk 18,Nalli,Sarees,3541,9570,63,3.3,18311,Limeroad,https://example.com/images/10018.jpg,https://example.com/product/10018
+10019,Nike Block Heels 19,Nike,Footwear,3809,8656,56,3.7,18141,Tata Cliq Fashion,https://example.com/images/10019.jpg,https://example.com/product/10019
+10020,Caprese Leather Tote Bag 20,Caprese,Bags & Handbags,1198,1576,24,4.3,55343,Tata Cliq Fashion,https://example.com/images/10020.jpg,https://example.com/product/10020
+10021,ONLY Evening Gown 21,ONLY,Dresses,4134,14764,72,3.5,72522,Ajio,https://example.com/images/10021.jpg,https://example.com/product/10021
+10022,Fabindia A-Line Kurta 22,Fabindia,Kurtis & Suits,4698,7701,39,4.5,44597,Flipkart Fashion,https://example.com/images/10022.jpg,https://example.com/product/10022
+10023,Puma Formal Leather Shoes 23,Puma,Footwear,4016,4227,5,4.9,34532,Tata Cliq Fashion,https://example.com/images/10023.jpg,https://example.com/product/10023
+10024,Sukkhi Silver Necklace 24,Sukkhi,Jewellery,58550,102719,43,4.7,66550,Tata Cliq Fashion,https://example.com/images/10024.jpg,https://example.com/product/10024
+10025,YouBella Leather Belt 25,YouBella,Accessories,1623,6242,74,4.9,69524,Flipkart Fashion,https://example.com/images/10025.jpg,https://example.com/product/10025
+10026,Mimosa Banarasi Silk Saree 26,Mimosa,Sarees,1216,2481,51,4.8,40316,Limeroad,https://example.com/images/10026.jpg,https://example.com/product/10026
+10027,Anouk Printed Kurta 27,Anouk,Kurtis & Suits,945,1111,15,4.5,9081,Ajio,https://example.com/images/10027.jpg,https://example.com/product/10027
+10028,Malabar Gold Diamond Bangle 28,Malabar Gold,Jewellery,37531,50717,26,3.5,79517,Nykaa Fashion,https://example.com/images/10028.jpg,https://example.com/product/10028
+10029,Fastrack Silk Scarf 29,Fastrack,Accessories,2853,6484,56,5.0,48954,Nykaa Fashion,https://example.com/images/10029.jpg,https://example.com/product/10029
+10030,Caprese Designer Handbag 30,Caprese,Bags & Handbags,2140,2459,13,3.7,77120,Tata Cliq Fashion,https://example.com/images/10030.jpg,https://example.com/product/10030
+10031,Fastrack Silk Scarf 31,Fastrack,Accessories,358,416,14,4.4,7726,Limeroad,https://example.com/images/10031.jpg,https://example.com/product/10031
+10032,Zara Casual A-Line Dress 32,Zara,Dresses,880,2933,70,3.5,63634,Limeroad,https://example.com/images/10032.jpg,https://example.com/product/10032
+10033,Voylla Beaded Bracelet 33,Voylla,Jewellery,39262,112177,65,3.5,62003,Ajio,https://example.com/images/10033.jpg,https://example.com/product/10033
+10034,Fastrack Analog Watch 34,Fastrack,Watches,4176,10440,60,3.7,53893,Nykaa Fashion,https://example.com/images/10034.jpg,https://example.com/product/10034
+10035,Fabindia A-Line Kurta 35,Fabindia,Kurtis & Suits,796,1809,56,4.5,14332,Limeroad,https://example.com/images/10035.jpg,https://example.com/product/10035
+10036,YouBella Woolen Beanie 36,YouBella,Accessories,3975,5096,22,3.8,36519,Nykaa Fashion,https://example.com/images/10036.jpg,https://example.com/product/10036
+10037,Crunchy Fashion Hair Clip Set 37,Crunchy Fashion,Accessories,4808,5792,17,3.1,70865,Ajio,https://example.com/images/10037.jpg,https://example.com/product/10037
+10038,Wishful Straight Suit Set 38,Wishful,Kurtis & Suits,1662,3865,57,4.0,28026,Ajio,https://example.com/images/10038.jpg,https://example.com/product/10038
+10039,Titan Chronograph Watch 39,Titan,Watches,13418,14124,5,5.0,34770,Ajio,https://example.com/images/10039.jpg,https://example.com/product/10039
+10040,Lavie Travel Backpack 40,Lavie,Bags & Handbags,4852,14703,67,3.3,38900,Limeroad,https://example.com/images/10040.jpg,https://example.com/product/10040
+10041,W Printed Kurta 41,W,Kurtis & Suits,799,1452,45,3.1,76579,Nykaa Fashion,https://example.com/images/10041.jpg,https://example.com/product/10041
+10042,Joyalukkas Beaded Bracelet 42,Joyalukkas,Jewellery,6750,9375,28,3.1,8917,Amazon Fashion,https://example.com/images/10042.jpg,https://example.com/product/10042
+10043,Lenskart Cat-Eye Sunglasses 43,Lenskart,Accessories,4966,7759,36,4.2,5219,Tata Cliq Fashion,https://example.com/images/10043.jpg,https://example.com/product/10043
+10044,ONLY Midi Dress 44,ONLY,Dresses,4930,17000,71,3.6,34189,Limeroad,https://example.com/images/10044.jpg,https://example.com/product/10044
+10045,Nalli Georgette Printed Saree 45,Nalli,Sarees,3542,4483,21,4.3,39331,Nykaa Fashion,https://example.com/images/10045.jpg,https://example.com/product/10045
+10046,Sabyasachi Banarasi Silk Saree 46,Sabyasachi,Sarees,4054,4884,17,3.1,27948,Tata Cliq Fashion,https://example.com/images/10046.jpg,https://example.com/product/10046
+10047,Metro Casual Sneakers 47,Metro,Footwear,863,1348,36,3.7,20686,Nykaa Fashion,https://example.com/images/10047.jpg,https://example.com/product/10047
+10048,Adidas Block Heels 48,Adidas,Footwear,364,1456,75,3.6,13587,Limeroad,https://example.com/images/10048.jpg,https://example.com/product/10048
+10049,Bata Running Shoes 49,Bata,Footwear,4832,6357,24,3.5,79286,Limeroad,https://example.com/images/10049.jpg,https://example.com/product/10049
+10050,Nalli Georgette Printed Saree 50,Nalli,Sarees,4440,13454,67,3.5,6668,Flipkart Fashion,https://example.com/images/10050.jpg,https://example.com/product/10050
+10051,Sonata Analog Watch 51,Sonata,Watches,1116,2105,47,4.5,34345,Limeroad,https://example.com/images/10051.jpg,https://example.com/product/10051
+10052,Hidesign Travel Backpack 52,Hidesign,Bags & Handbags,4894,5206,6,3.2,19546,Tata Cliq Fashion,https://example.com/images/10052.jpg,https://example.com/product/10052
+10053,Aurelia Printed Kurta 53,Aurelia,Kurtis & Suits,4826,6267,23,3.9,5492,Craftsvilla,https://example.com/images/10053.jpg,https://example.com/product/10053
+10054,Sabyasachi Georgette Printed Saree 54,Sabyasachi,Sarees,2020,3156,36,4.3,46367,Ajio,https://example.com/images/10054.jpg,https://example.com/product/10054
+10055,Fossil Chronograph Watch 55,Fossil,Watches,8757,11676,25,5.0,23216,Nykaa Fashion,https://example.com/images/10055.jpg,https://example.com/product/10055
+10056,Anouk Anarkali Kurti 56,Anouk,Kurtis & Suits,3672,5737,36,3.5,14178,Nykaa Fashion,https://example.com/images/10056.jpg,https://example.com/product/10056
+10057,Biba Straight Suit Set 57,Biba,Kurtis & Suits,1934,5227,63,3.7,29841,Limeroad,https://example.com/images/10057.jpg,https://example.com/product/10057
+10058,Fabindia Straight Suit Set 58,Fabindia,Kurtis & Suits,3564,6724,47,3.6,9109,Ajio,https://example.com/images/10058.jpg,https://example.com/product/10058
+10059,Mochi Block Heels 59,Mochi,Footwear,3574,13237,73,3.7,3627,Flipkart Fashion,https://example.com/images/10059.jpg,https://example.com/product/10059
+10060,Metro Block Heels 60,Metro,Footwear,2474,2718,9,3.2,56969,Craftsvilla,https://example.com/images/10060.jpg,https://example.com/product/10060
+10061,Mimosa Chanderi Saree 61,Mimosa,Sarees,4489,5541,19,3.8,75584,Limeroad,https://example.com/images/10061.jpg,https://example.com/product/10061
+10062,Bata Strappy Sandals 62,Bata,Footwear,313,1079,71,4.9,70585,Amazon Fashion,https://example.com/images/10062.jpg,https://example.com/product/10062
+10063,Zaveri Pearls Hair Clip Set 63,Zaveri Pearls,Accessories,873,1647,47,4.2,16344,Amazon Fashion,https://example.com/images/10063.jpg,https://example.com/product/10063
+10064,Adidas Casual Sneakers 64,Adidas,Footwear,3645,6750,46,3.8,38762,Tata Cliq Fashion,https://example.com/images/10064.jpg,https://example.com/product/10064
+10065,Malabar Gold Diamond Bangle 65,Malabar Gold,Jewellery,45076,95906,53,4.4,22820,Tata Cliq Fashion,https://example.com/images/10065.jpg,https://example.com/product/10065
+10066,Puma Block Heels 66,Puma,Footwear,303,531,43,3.6,56356,Ajio,https://example.com/images/10066.jpg,https://example.com/product/10066
+10067,Mimosa Kanchipuram Silk 67,Mimosa,Sarees,3922,5767,32,4.0,22251,Amazon Fashion,https://example.com/images/10067.jpg,https://example.com/product/10067
+10068,Vero Moda Midi Dress 68,Vero Moda,Dresses,3045,3625,16,4.6,30794,Amazon Fashion,https://example.com/images/10068.jpg,https://example.com/product/10068
+10069,Metro Formal Leather Shoes 69,Metro,Footwear,1507,1638,8,3.1,62287,Tata Cliq Fashion,https://example.com/images/10069.jpg,https://example.com/product/10069
+10070,ONLY Evening Gown 70,ONLY,Dresses,1892,4113,54,4.0,31989,Limeroad,https://example.com/images/10070.jpg,https://example.com/product/10070
+10071,Wishful Patiala Suit 71,Wishful,Kurtis & Suits,2092,2865,27,4.6,67899,Nykaa Fashion,https://example.com/images/10071.jpg,https://example.com/product/10071
+10072,W Straight Suit Set 72,W,Kurtis & Suits,1294,3497,63,3.3,60911,Amazon Fashion,https://example.com/images/10072.jpg,https://example.com/product/10072
+10073,Mimosa Chanderi Saree 73,Mimosa,Sarees,4435,10817,59,4.7,71820,Nykaa Fashion,https://example.com/images/10073.jpg,https://example.com/product/10073
+10074,Voylla Diamond Bangle 74,Voylla,Jewellery,30995,49991,38,4.5,36357,Ajio,https://example.com/images/10074.jpg,https://example.com/product/10074
+10075,Puma Designer Handbag 75,Puma,Bags & Handbags,2549,6535,61,3.2,37460,Limeroad,https://example.com/images/10075.jpg,https://example.com/product/10075
+10076,Mochi Casual Sneakers 76,Mochi,Footwear,4724,5557,15,3.3,30321,Nykaa Fashion,https://example.com/images/10076.jpg,https://example.com/product/10076
+10077,Voylla Gold Plated Ring 77,Voylla,Jewellery,5709,13592,58,3.8,71131,Nykaa Fashion,https://example.com/images/10077.jpg,https://example.com/product/10077
+10078,Titan Chronograph Watch 78,Titan,Watches,14767,32102,54,4.8,76566,Amazon Fashion,https://example.com/images/10078.jpg,https://example.com/product/10078
+10079,W Patiala Suit 79,W,Kurtis & Suits,4207,4428,5,4.9,39149,Ajio,https://example.com/images/10079.jpg,https://example.com/product/10079
+10080,Casio Stainless Steel Watch 80,Casio,Watches,18895,28201,33,4.0,35784,Nykaa Fashion,https://example.com/images/10080.jpg,https://example.com/product/10080
+10081,Caprese Travel Backpack 81,Caprese,Bags & Handbags,3053,6938,56,4.4,61271,Limeroad,https://example.com/images/10081.jpg,https://example.com/product/10081
+10082,Biba Printed Kurta 82,Biba,Kurtis & Suits,4923,5351,8,3.2,56189,Limeroad,https://example.com/images/10082.jpg,https://example.com/product/10082
+10083,Baggit Leather Tote Bag 83,Baggit,Bags & Handbags,2431,5172,53,3.7,59608,Craftsvilla,https://example.com/images/10083.jpg,https://example.com/product/10083
+10084,Mimosa Georgette Printed Saree 84,Mimosa,Sarees,3753,5957,37,4.7,61654,Flipkart Fashion,https://example.com/images/10084.jpg,https://example.com/product/10084
+10085,Aurelia Straight Suit Set 85,Aurelia,Kurtis & Suits,862,957,10,4.5,32421,Limeroad,https://example.com/images/10085.jpg,https://example.com/product/10085
+10086,W Straight Suit Set 86,W,Kurtis & Suits,2254,2853,21,3.9,15003,Tata Cliq Fashion,https://example.com/images/10086.jpg,https://example.com/product/10086
+10087,Lenskart Leather Belt 87,Lenskart,Accessories,3321,4487,26,4.2,15022,Ajio,https://example.com/images/10087.jpg,https://example.com/product/10087
+10088,Tanishq Silver Necklace 88,Tanishq,Jewellery,39424,42852,8,4.9,75480,Amazon Fashion,https://example.com/images/10088.jpg,https://example.com/product/10088
+10089,Casio Chronograph Watch 89,Casio,Watches,3490,5453,36,3.2,39539,Ajio,https://example.com/images/10089.jpg,https://example.com/product/10089
+10090,AND Maxi Dress 90,AND,Dresses,3144,11644,73,3.9,48581,Flipkart Fashion,https://example.com/images/10090.jpg,https://example.com/product/10090
+10091,Sabyasachi Kanchipuram Silk 91,Sabyasachi,Sarees,4315,5262,18,3.9,47482,Amazon Fashion,https://example.com/images/10091.jpg,https://example.com/product/10091
+10092,Puma Designer Handbag 92,Puma,Bags & Handbags,3867,5297,27,4.5,35410,Tata Cliq Fashion,https://example.com/images/10092.jpg,https://example.com/product/10092
+10093,Lino Perros Travel Backpack 93,Lino Perros,Bags & Handbags,2498,4625,46,4.7,11369,Craftsvilla,https://example.com/images/10093.jpg,https://example.com/product/10093
+10094,Baggit Travel Backpack 94,Baggit,Bags & Handbags,4968,10570,53,3.7,64799,Ajio,https://example.com/images/10094.jpg,https://example.com/product/10094
+10095,Nalli Kanchipuram Silk 95,Nalli,Sarees,2037,4074,50,4.6,44618,Craftsvilla,https://example.com/images/10095.jpg,https://example.com/product/10095
+10096,Adidas Running Shoes 96,Adidas,Footwear,4532,6383,29,3.2,53281,Nykaa Fashion,https://example.com/images/10096.jpg,https://example.com/product/10096
+10097,Lenskart Hair Clip Set 97,Lenskart,Accessories,3971,4269,7,3.2,29055,Nykaa Fashion,https://example.com/images/10097.jpg,https://example.com/product/10097
+10098,Zaveri Pearls Woolen Beanie 98,Zaveri Pearls,Accessories,3323,9494,65,4.1,45066,Nykaa Fashion,https://example.com/images/10098.jpg,https://example.com/product/10098
+10099,Fabindia Kanchipuram Silk 99,Fabindia,Sarees,2519,4498,44,3.5,15824,Amazon Fashion,https://example.com/images/10099.jpg,https://example.com/product/10099
+10100,Zaveri Pearls Cat-Eye Sunglasses 100,Zaveri Pearls,Accessories,4689,6512,28,3.4,63474,Craftsvilla,https://example.com/images/10100.jpg,https://example.com/product/10100
+10101,Bata Formal Leather Shoes 101,Bata,Footwear,2726,4130,34,3.7,39628,Flipkart Fashion,https://example.com/images/10101.jpg,https://example.com/product/10101
+10102,Tanishq Silver Necklace 102,Tanishq,Jewellery,5073,20292,75,3.6,16561,Amazon Fashion,https://example.com/images/10102.jpg,https://example.com/product/10102
+10103,Caprese Leather Tote Bag 103,Caprese,Bags & Handbags,2629,7511,65,4.0,44667,Limeroad,https://example.com/images/10103.jpg,https://example.com/product/10103
+10104,Aurelia Patiala Suit 104,Aurelia,Kurtis & Suits,1234,1418,13,3.8,9720,Tata Cliq Fashion,https://example.com/images/10104.jpg,https://example.com/product/10104
+10105,Anouk Straight Suit Set 105,Anouk,Kurtis & Suits,4910,8614,43,3.2,32540,Flipkart Fashion,https://example.com/images/10105.jpg,https://example.com/product/10105
+10106,Fossil Stainless Steel Watch 106,Fossil,Watches,21264,31737,33,4.6,49866,Nykaa Fashion,https://example.com/images/10106.jpg,https://example.com/product/10106
+10107,Lavie Clutch Bag 107,Lavie,Bags & Handbags,3812,6807,44,4.1,7904,Tata Cliq Fashion,https://example.com/images/10107.jpg,https://example.com/product/10107
+10108,H&M Floral Bodycon 108,H&M,Dresses,2467,2902,15,3.3,22792,Tata Cliq Fashion,https://example.com/images/10108.jpg,https://example.com/product/10108
+10109,H&M Maxi Dress 109,H&M,Dresses,3646,9594,62,4.4,61602,Craftsvilla,https://example.com/images/10109.jpg,https://example.com/product/10109
+10110,Anouk Anarkali Kurti 110,Anouk,Kurtis & Suits,2616,7070,63,3.1,30605,Craftsvilla,https://example.com/images/10110.jpg,https://example.com/product/10110
+10111,Lenskart Cat-Eye Sunglasses 111,Lenskart,Accessories,4761,7105,33,4.3,34826,Ajio,https://example.com/images/10111.jpg,https://example.com/product/10111
+10112,Joyalukkas Silver Necklace 112,Joyalukkas,Jewellery,12373,22094,44,4.2,74617,Craftsvilla,https://example.com/images/10112.jpg,https://example.com/product/10112
+10113,Caprese Travel Backpack 113,Caprese,Bags & Handbags,2791,6343,56,4.9,65607,Tata Cliq Fashion,https://example.com/images/10113.jpg,https://example.com/product/10113
+10114,Lino Perros Leather Tote Bag 114,Lino Perros,Bags & Handbags,626,1565,60,4.5,79139,Craftsvilla,https://example.com/images/10114.jpg,https://example.com/product/10114
+10115,Wishful Straight Suit Set 115,Wishful,Kurtis & Suits,469,768,39,4.2,22972,Nykaa Fashion,https://example.com/images/10115.jpg,https://example.com/product/10115
+10116,Lavie Designer Handbag 116,Lavie,Bags & Handbags,3870,11727,67,4.9,61615,Craftsvilla,https://example.com/images/10116.jpg,https://example.com/product/10116
+10117,Sonata Smart Fitness Band 117,Sonata,Watches,22958,27997,18,4.7,43238,Nykaa Fashion,https://example.com/images/10117.jpg,https://example.com/product/10117
+10118,Lavie Travel Backpack 118,Lavie,Bags & Handbags,4806,5281,9,3.9,41234,Craftsvilla,https://example.com/images/10118.jpg,https://example.com/product/10118
+10119,Sabyasachi Kanchipuram Silk 119,Sabyasachi,Sarees,4515,4752,5,4.3,71128,Nykaa Fashion,https://example.com/images/10119.jpg,https://example.com/product/10119
+10120,Titan Chronograph Watch 120,Titan,Watches,17988,36710,51,4.2,65348,Amazon Fashion,https://example.com/images/10120.jpg,https://example.com/product/10120
+10121,Caprese Designer Handbag 121,Caprese,Bags & Handbags,2487,9948,75,3.3,37762,Nykaa Fashion,https://example.com/images/10121.jpg,https://example.com/product/10121
+10122,Caprese Leather Tote Bag 122,Caprese,Bags & Handbags,2260,3013,25,3.6,1802,Tata Cliq Fashion,https://example.com/images/10122.jpg,https://example.com/product/10122
+10123,Titan Chronograph Watch 123,Titan,Watches,4717,13102,64,4.9,20191,Nykaa Fashion,https://example.com/images/10123.jpg,https://example.com/product/10123
+10124,Adidas Casual Sneakers 124,Adidas,Footwear,3703,10891,66,5.0,31956,Nykaa Fashion,https://example.com/images/10124.jpg,https://example.com/product/10124
+10125,Giva Gold Plated Ring 125,Giva,Jewellery,40780,135933,70,4.5,17902,Ajio,https://example.com/images/10125.jpg,https://example.com/product/10125
+10126,Vero Moda Evening Gown 126,Vero Moda,Dresses,3084,9948,69,3.5,346,Craftsvilla,https://example.com/images/10126.jpg,https://example.com/product/10126
+10127,Crocs Block Heels 127,Crocs,Footwear,4311,5672,24,3.9,63493,Craftsvilla,https://example.com/images/10127.jpg,https://example.com/product/10127
+10128,Vardhaman Chanderi Saree 128,Vardhaman,Sarees,3390,9162,63,4.9,24737,Amazon Fashion,https://example.com/images/10128.jpg,https://example.com/product/10128
+10129,Fastrack Hair Clip Set 129,Fastrack,Accessories,2213,5146,57,3.1,62003,Amazon Fashion,https://example.com/images/10129.jpg,https://example.com/product/10129
+10130,Casio Chronograph Watch 130,Casio,Watches,17230,18934,9,3.3,77366,Craftsvilla,https://example.com/images/10130.jpg,https://example.com/product/10130
+10131,ONLY Maxi Dress 131,ONLY,Dresses,4608,12454,63,3.0,18904,Nykaa Fashion,https://example.com/images/10131.jpg,https://example.com/product/10131
+10132,Joyalukkas Diamond Bangle 132,Joyalukkas,Jewellery,52718,85029,38,3.7,52108,Amazon Fashion,https://example.com/images/10132.jpg,https://example.com/product/10132
+10133,Vero Moda Midi Dress 133,Vero Moda,Dresses,3413,6205,45,4.3,63966,Ajio,https://example.com/images/10133.jpg,https://example.com/product/10133
+10134,W A-Line Kurta 134,W,Kurtis & Suits,2223,3767,41,5.0,11856,Nykaa Fashion,https://example.com/images/10134.jpg,https://example.com/product/10134
+10135,Forever 21 Maxi Dress 135,Forever 21,Dresses,3934,5316,26,4.4,3804,Flipkart Fashion,https://example.com/images/10135.jpg,https://example.com/product/10135
+10136,Sabyasachi Georgette Printed Saree 136,Sabyasachi,Sarees,3236,6741,52,3.9,32017,Tata Cliq Fashion,https://example.com/images/10136.jpg,https://example.com/product/10136
+10137,Fossil Chronograph Watch 137,Fossil,Watches,6570,9000,27,3.2,50150,Tata Cliq Fashion,https://example.com/images/10137.jpg,https://example.com/product/10137
+10138,Lenskart Woolen Beanie 138,Lenskart,Accessories,1472,2230,34,3.9,33299,Nykaa Fashion,https://example.com/images/10138.jpg,https://example.com/product/10138
+10139,Nike Running Shoes 139,Nike,Footwear,4111,6967,41,4.4,20716,Flipkart Fashion,https://example.com/images/10139.jpg,https://example.com/product/10139
+10140,Lavie Clutch Bag 140,Lavie,Bags & Handbags,2750,6707,59,4.4,59888,Ajio,https://example.com/images/10140.jpg,https://example.com/product/10140
+10141,Metro Strappy Sandals 141,Metro,Footwear,4258,5192,18,3.5,74973,Craftsvilla,https://example.com/images/10141.jpg,https://example.com/product/10141
+10142,Nike Casual Sneakers 142,Nike,Footwear,479,1064,55,3.5,74187,Ajio,https://example.com/images/10142.jpg,https://example.com/product/10142
+10143,W Patiala Suit 143,W,Kurtis & Suits,2644,4006,34,4.2,46189,Limeroad,https://example.com/images/10143.jpg,https://example.com/product/10143
+10144,Fastrack Leather Belt 144,Fastrack,Accessories,1420,1710,17,4.8,5177,Craftsvilla,https://example.com/images/10144.jpg,https://example.com/product/10144
+10145,Caprese Clutch Bag 145,Caprese,Bags & Handbags,3288,4162,21,3.2,38690,Craftsvilla,https://example.com/images/10145.jpg,https://example.com/product/10145
+10146,Fastrack Chronograph Watch 146,Fastrack,Watches,5330,20500,74,4.8,47963,Tata Cliq Fashion,https://example.com/images/10146.jpg,https://example.com/product/10146
+10147,Crocs Formal Leather Shoes 147,Crocs,Footwear,2405,7073,66,4.9,38694,Amazon Fashion,https://example.com/images/10147.jpg,https://example.com/product/10147
+10148,Sabyasachi Kanchipuram Silk 148,Sabyasachi,Sarees,916,1189,23,4.5,29581,Ajio,https://example.com/images/10148.jpg,https://example.com/product/10148
+10149,Fossil Smart Fitness Band 149,Fossil,Watches,3959,8797,55,3.0,70339,Flipkart Fashion,https://example.com/images/10149.jpg,https://example.com/product/10149
+10150,Lavie Sling Purse 150,Lavie,Bags & Handbags,3421,7127,52,3.2,30657,Nykaa Fashion,https://example.com/images/10150.jpg,https://example.com/product/10150
+10151,W Printed Kurta 151,W,Kurtis & Suits,2987,4458,33,4.3,60862,Amazon Fashion,https://example.com/images/10151.jpg,https://example.com/product/10151
+10152,Nike Strappy Sandals 152,Nike,Footwear,1255,1608,22,3.1,4887,Craftsvilla,https://example.com/images/10152.jpg,https://example.com/product/10152
+10153,Caprese Leather Tote Bag 153,Caprese,Bags & Handbags,2223,8233,73,3.3,59469,Craftsvilla,https://example.com/images/10153.jpg,https://example.com/product/10153
+10154,Fossil Chronograph Watch 154,Fossil,Watches,14594,17583,17,4.7,53502,Craftsvilla,https://example.com/images/10154.jpg,https://example.com/product/10154
+10155,Fabindia Anarkali Kurti 155,Fabindia,Kurtis & Suits,2079,5330,61,3.9,30957,Ajio,https://example.com/images/10155.jpg,https://example.com/product/10155
+10156,Sabyasachi Georgette Printed Saree 156,Sabyasachi,Sarees,4760,9520,50,3.1,36170,Limeroad,https://example.com/images/10156.jpg,https://example.com/product/10156
+10157,ONLY Maxi Dress 157,ONLY,Dresses,2037,2190,7,3.1,43723,Limeroad,https://example.com/images/10157.jpg,https://example.com/product/10157
+10158,Sukkhi Gold Plated Ring 158,Sukkhi,Jewellery,5996,23984,75,3.4,28315,Ajio,https://example.com/images/10158.jpg,https://example.com/product/10158
+10159,Zaveri Pearls Silk Scarf 159,Zaveri Pearls,Accessories,323,538,40,4.7,18974,Limeroad,https://example.com/images/10159.jpg,https://example.com/product/10159
+10160,Crocs Formal Leather Shoes 160,Crocs,Footwear,1200,1304,8,3.3,46965,Ajio,https://example.com/images/10160.jpg,https://example.com/product/10160
+10161,Fastrack Leather Belt 161,Fastrack,Accessories,429,587,27,3.5,16624,Amazon Fashion,https://example.com/images/10161.jpg,https://example.com/product/10161
+10162,Fossil Analog Watch 162,Fossil,Watches,3082,8805,65,3.9,47463,Tata Cliq Fashion,https://example.com/images/10162.jpg,https://example.com/product/10162
+10163,ONLY Midi Dress 163,ONLY,Dresses,2114,2348,10,4.5,68357,Craftsvilla,https://example.com/images/10163.jpg,https://example.com/product/10163
+10164,Puma Leather Tote Bag 164,Puma,Bags & Handbags,798,2347,66,4.7,55882,Amazon Fashion,https://example.com/images/10164.jpg,https://example.com/product/10164
+10165,ONLY Evening Gown 165,ONLY,Dresses,902,1061,15,3.6,19452,Flipkart Fashion,https://example.com/images/10165.jpg,https://example.com/product/10165
+10166,Tanishq Beaded Bracelet 166,Tanishq,Jewellery,42989,171956,75,4.4,49935,Tata Cliq Fashion,https://example.com/images/10166.jpg,https://example.com/product/10166
+10167,Puma Block Heels 167,Puma,Footwear,3824,4607,17,4.6,15006,Ajio,https://example.com/images/10167.jpg,https://example.com/product/10167
+10168,Lenskart Hair Clip Set 168,Lenskart,Accessories,2171,5048,57,3.7,59451,Nykaa Fashion,https://example.com/images/10168.jpg,https://example.com/product/10168
+10169,Daniel Wellington Analog Watch 169,Daniel Wellington,Watches,11241,27417,59,3.6,33418,Craftsvilla,https://example.com/images/10169.jpg,https://example.com/product/10169
+10170,Voylla Diamond Bangle 170,Voylla,Jewellery,5899,7022,16,4.7,12229,Nykaa Fashion,https://example.com/images/10170.jpg,https://example.com/product/10170
+10171,Forever 21 Casual A-Line Dress 171,Forever 21,Dresses,1365,1551,12,4.2,73618,Tata Cliq Fashion,https://example.com/images/10171.jpg,https://example.com/product/10171
+10172,Sabyasachi Kanchipuram Silk 172,Sabyasachi,Sarees,3196,7795,59,4.7,6753,Craftsvilla,https://example.com/images/10172.jpg,https://example.com/product/10172
+10173,Mochi Running Shoes 173,Mochi,Footwear,4456,6552,32,3.3,63211,Limeroad,https://example.com/images/10173.jpg,https://example.com/product/10173
+10174,Vero Moda Midi Dress 174,Vero Moda,Dresses,3311,4087,19,4.5,75258,Limeroad,https://example.com/images/10174.jpg,https://example.com/product/10174
+10175,Fossil Stainless Steel Watch 175,Fossil,Watches,21105,22940,8,4.2,35064,Flipkart Fashion,https://example.com/images/10175.jpg,https://example.com/product/10175
+10176,Tanishq Pearl Earrings 176,Tanishq,Jewellery,23770,46607,49,3.0,18786,Tata Cliq Fashion,https://example.com/images/10176.jpg,https://example.com/product/10176
+10177,Titan Chronograph Watch 177,Titan,Watches,21747,23638,8,3.2,69541,Limeroad,https://example.com/images/10177.jpg,https://example.com/product/10177
+10178,Casio Leather Strap Watch 178,Casio,Watches,12170,16226,25,3.7,42527,Ajio,https://example.com/images/10178.jpg,https://example.com/product/10178
+10179,Zara Floral Bodycon 179,Zara,Dresses,1589,1785,11,4.3,35675,Nykaa Fashion,https://example.com/images/10179.jpg,https://example.com/product/10179
+10180,Casio Stainless Steel Watch 180,Casio,Watches,15484,36866,58,3.5,67164,Flipkart Fashion,https://example.com/images/10180.jpg,https://example.com/product/10180
+10181,Mimosa Banarasi Silk Saree 181,Mimosa,Sarees,2620,7939,67,4.1,40435,Flipkart Fashion,https://example.com/images/10181.jpg,https://example.com/product/10181
+10182,Lenskart Woolen Beanie 182,Lenskart,Accessories,748,787,5,3.4,27696,Ajio,https://example.com/images/10182.jpg,https://example.com/product/10182
+10183,Tanishq Pearl Earrings 183,Tanishq,Jewellery,23003,28753,20,3.0,56456,Limeroad,https://example.com/images/10183.jpg,https://example.com/product/10183
+10184,Giva Beaded Bracelet 184,Giva,Jewellery,47615,72143,34,4.0,46431,Flipkart Fashion,https://example.com/images/10184.jpg,https://example.com/product/10184
+10185,Daniel Wellington Analog Watch 185,Daniel Wellington,Watches,15294,16445,7,3.9,10215,Ajio,https://example.com/images/10185.jpg,https://example.com/product/10185
+10186,Vardhaman Kanchipuram Silk 186,Vardhaman,Sarees,4997,11356,56,4.4,54757,Craftsvilla,https://example.com/images/10186.jpg,https://example.com/product/10186
+10187,ONLY Maxi Dress 187,ONLY,Dresses,2960,4000,26,4.6,60315,Ajio,https://example.com/images/10187.jpg,https://example.com/product/10187
+10188,Sabyasachi Kanchipuram Silk 188,Sabyasachi,Sarees,1167,1823,36,3.9,52497,Tata Cliq Fashion,https://example.com/images/10188.jpg,https://example.com/product/10188
+10189,ONLY Casual A-Line Dress 189,ONLY,Dresses,3081,4598,33,3.7,22047,Flipkart Fashion,https://example.com/images/10189.jpg,https://example.com/product/10189
+10190,AND Midi Dress 190,AND,Dresses,1888,3701,49,3.7,19368,Limeroad,https://example.com/images/10190.jpg,https://example.com/product/10190
+10191,H&M Casual A-Line Dress 191,H&M,Dresses,1916,2624,27,4.2,9886,Limeroad,https://example.com/images/10191.jpg,https://example.com/product/10191
+10192,Lino Perros Clutch Bag 192,Lino Perros,Bags & Handbags,3977,7364,46,4.7,41446,Limeroad,https://example.com/images/10192.jpg,https://example.com/product/10192
+10193,Caprese Travel Backpack 193,Caprese,Bags & Handbags,3922,6880,43,4.6,77528,Flipkart Fashion,https://example.com/images/10193.jpg,https://example.com/product/10193
+10194,Vardhaman Banarasi Silk Saree 194,Vardhaman,Sarees,2842,7894,64,3.9,7466,Craftsvilla,https://example.com/images/10194.jpg,https://example.com/product/10194
+10195,Bata Running Shoes 195,Bata,Footwear,4453,9680,54,3.9,72665,Ajio,https://example.com/images/10195.jpg,https://example.com/product/10195
+10196,Biba Printed Kurta 196,Biba,Kurtis & Suits,1842,3411,46,4.2,65725,Limeroad,https://example.com/images/10196.jpg,https://example.com/product/10196
+10197,Biba A-Line Kurta 197,Biba,Kurtis & Suits,3113,3662,15,4.0,22627,Flipkart Fashion,https://example.com/images/10197.jpg,https://example.com/product/10197
+10198,Lenskart Hair Clip Set 198,Lenskart,Accessories,4593,15837,71,4.2,47706,Craftsvilla,https://example.com/images/10198.jpg,https://example.com/product/10198
+10199,Puma Strappy Sandals 199,Puma,Footwear,3071,3450,11,4.6,43873,Flipkart Fashion,https://example.com/images/10199.jpg,https://example.com/product/10199
+10200,Sabyasachi Chanderi Saree 200,Sabyasachi,Sarees,3466,5874,41,3.5,79007,Ajio,https://example.com/images/10200.jpg,https://example.com/product/10200
+10201,Tanishq Silver Necklace 201,Tanishq,Jewellery,39690,51545,23,4.8,40672,Amazon Fashion,https://example.com/images/10201.jpg,https://example.com/product/10201
+10202,Fastrack Stainless Steel Watch 202,Fastrack,Watches,24227,28502,15,3.6,49382,Amazon Fashion,https://example.com/images/10202.jpg,https://example.com/product/10202
+10203,Nalli Chanderi Saree 203,Nalli,Sarees,1065,2597,59,4.0,2399,Craftsvilla,https://example.com/images/10203.jpg,https://example.com/product/10203
+10204,Metro Formal Leather Shoes 204,Metro,Footwear,3099,9390,67,3.4,18040,Limeroad,https://example.com/images/10204.jpg,https://example.com/product/10204
+10205,Vero Moda Maxi Dress 205,Vero Moda,Dresses,4458,17146,74,4.7,69023,Flipkart Fashion,https://example.com/images/10205.jpg,https://example.com/product/10205
+10206,Vardhaman Cotton Sari 206,Vardhaman,Sarees,3386,4455,24,3.3,21707,Amazon Fashion,https://example.com/images/10206.jpg,https://example.com/product/10206
+10207,Caprese Travel Backpack 207,Caprese,Bags & Handbags,3284,5052,35,4.9,37356,Ajio,https://example.com/images/10207.jpg,https://example.com/product/10207
+10208,Baggit Clutch Bag 208,Baggit,Bags & Handbags,2259,4033,44,4.9,61484,Ajio,https://example.com/images/10208.jpg,https://example.com/product/10208
+10209,Zaveri Pearls Woolen Beanie 209,Zaveri Pearls,Accessories,3909,10858,64,4.5,50062,Tata Cliq Fashion,https://example.com/images/10209.jpg,https://example.com/product/10209
+10210,Fastrack Chronograph Watch 210,Fastrack,Watches,20813,26683,22,4.7,6849,Amazon Fashion,https://example.com/images/10210.jpg,https://example.com/product/10210
+10211,Lavie Clutch Bag 211,Lavie,Bags & Handbags,1140,3931,71,4.7,37373,Flipkart Fashion,https://example.com/images/10211.jpg,https://example.com/product/10211
+10212,Tanishq Diamond Bangle 212,Tanishq,Jewellery,35143,45640,23,4.7,12031,Limeroad,https://example.com/images/10212.jpg,https://example.com/product/10212
+10213,Lavie Leather Tote Bag 213,Lavie,Bags & Handbags,3698,4155,11,3.8,49025,Limeroad,https://example.com/images/10213.jpg,https://example.com/product/10213
+10214,Titan Smart Fitness Band 214,Titan,Watches,8357,9083,8,3.6,12997,Ajio,https://example.com/images/10214.jpg,https://example.com/product/10214
+10215,Nalli Cotton Sari 215,Nalli,Sarees,613,1038,41,4.8,61935,Amazon Fashion,https://example.com/images/10215.jpg,https://example.com/product/10215
+10216,Voylla Diamond Bangle 216,Voylla,Jewellery,30899,32525,5,4.8,2500,Craftsvilla,https://example.com/images/10216.jpg,https://example.com/product/10216
+10217,YouBella Woolen Beanie 217,YouBella,Accessories,4623,11275,59,3.2,37772,Limeroad,https://example.com/images/10217.jpg,https://example.com/product/10217
+10218,Bata Running Shoes 218,Bata,Footwear,2253,5364,58,4.3,59924,Flipkart Fashion,https://example.com/images/10218.jpg,https://example.com/product/10218
+10219,ONLY Midi Dress 219,ONLY,Dresses,4691,5044,7,4.3,75382,Limeroad,https://example.com/images/10219.jpg,https://example.com/product/10219
+10220,Tanishq Diamond Bangle 220,Tanishq,Jewellery,1602,3204,50,3.5,54610,Limeroad,https://example.com/images/10220.jpg,https://example.com/product/10220
+10221,AND Casual A-Line Dress 221,AND,Dresses,854,3050,72,4.1,66545,Tata Cliq Fashion,https://example.com/images/10221.jpg,https://example.com/product/10221
+10222,Biba Patiala Suit 222,Biba,Kurtis & Suits,656,1426,54,5.0,33256,Amazon Fashion,https://example.com/images/10222.jpg,https://example.com/product/10222
+10223,Aurelia A-Line Kurta 223,Aurelia,Kurtis & Suits,3124,4806,35,4.5,13597,Ajio,https://example.com/images/10223.jpg,https://example.com/product/10223
+10224,Nalli Banarasi Silk Saree 224,Nalli,Sarees,3186,12253,74,3.7,22959,Ajio,https://example.com/images/10224.jpg,https://example.com/product/10224
+10225,Puma Travel Backpack 225,Puma,Bags & Handbags,1793,2298,22,3.1,59998,Flipkart Fashion,https://example.com/images/10225.jpg,https://example.com/product/10225
+10226,Metro Running Shoes 226,Metro,Footwear,1934,2148,10,3.6,40652,Tata Cliq Fashion,https://example.com/images/10226.jpg,https://example.com/product/10226
+10227,Fossil Leather Strap Watch 227,Fossil,Watches,9300,10219,9,4.5,25058,Craftsvilla,https://example.com/images/10227.jpg,https://example.com/product/10227
+10228,Sabyasachi Georgette Printed Saree 228,Sabyasachi,Sarees,2538,3172,20,4.6,57282,Nykaa Fashion,https://example.com/images/10228.jpg,https://example.com/product/10228
+10229,Lino Perros Sling Purse 229,Lino Perros,Bags & Handbags,1830,5718,68,4.4,48158,Ajio,https://example.com/images/10229.jpg,https://example.com/product/10229
+10230,Crocs Running Shoes 230,Crocs,Footwear,3777,4443,15,3.9,23662,Tata Cliq Fashion,https://example.com/images/10230.jpg,https://example.com/product/10230
+10231,Mochi Running Shoes 231,Mochi,Footwear,955,1768,46,4.3,40183,Nykaa Fashion,https://example.com/images/10231.jpg,https://example.com/product/10231
+10232,Fastrack Leather Strap Watch 232,Fastrack,Watches,12519,32944,62,3.1,46220,Tata Cliq Fashion,https://example.com/images/10232.jpg,https://example.com/product/10232
+10233,Sonata Analog Watch 233,Sonata,Watches,3458,7859,56,3.7,20979,Flipkart Fashion,https://example.com/images/10233.jpg,https://example.com/product/10233
+10234,Sukkhi Diamond Bangle 234,Sukkhi,Jewellery,3780,4784,21,3.1,48025,Craftsvilla,https://example.com/images/10234.jpg,https://example.com/product/10234
+10235,Fossil Analog Watch 235,Fossil,Watches,20827,27403,24,4.4,48633,Craftsvilla,https://example.com/images/10235.jpg,https://example.com/product/10235
+10236,Caprese Clutch Bag 236,Caprese,Bags & Handbags,1427,5096,72,3.7,41217,Amazon Fashion,https://example.com/images/10236.jpg,https://example.com/product/10236
+10237,Metro Running Shoes 237,Metro,Footwear,512,711,28,4.0,50733,Tata Cliq Fashion,https://example.com/images/10237.jpg,https://example.com/product/10237
+10238,Vero Moda Casual A-Line Dress 238,Vero Moda,Dresses,3955,5816,32,5.0,37441,Amazon Fashion,https://example.com/images/10238.jpg,https://example.com/product/10238
+10239,Baggit Leather Tote Bag 239,Baggit,Bags & Handbags,1411,1640,14,3.9,58351,Flipkart Fashion,https://example.com/images/10239.jpg,https://example.com/product/10239
+10240,Fabindia Banarasi Silk Saree 240,Fabindia,Sarees,4805,18480,74,3.6,39325,Ajio,https://example.com/images/10240.jpg,https://example.com/product/10240
+10241,Voylla Gold Plated Ring 241,Voylla,Jewellery,53515,109214,51,4.0,15917,Limeroad,https://example.com/images/10241.jpg,https://example.com/product/10241
+10242,Malabar Gold Diamond Bangle 242,Malabar Gold,Jewellery,3222,6575,51,4.1,48363,Nykaa Fashion,https://example.com/images/10242.jpg,https://example.com/product/10242
+10243,Sukkhi Silver Necklace 243,Sukkhi,Jewellery,5808,10371,44,3.8,62749,Tata Cliq Fashion,https://example.com/images/10243.jpg,https://example.com/product/10243
+10244,Casio Stainless Steel Watch 244,Casio,Watches,3416,4324,21,4.9,9730,Nykaa Fashion,https://example.com/images/10244.jpg,https://example.com/product/10244
+10245,Puma Clutch Bag 245,Puma,Bags & Handbags,3122,3951,21,4.8,72270,Amazon Fashion,https://example.com/images/10245.jpg,https://example.com/product/10245
+10246,Malabar Gold Diamond Bangle 246,Malabar Gold,Jewellery,34455,39153,12,4.7,67918,Limeroad,https://example.com/images/10246.jpg,https://example.com/product/10246
+10247,Metro Formal Leather Shoes 247,Metro,Footwear,2943,4392,33,3.7,68022,Craftsvilla,https://example.com/images/10247.jpg,https://example.com/product/10247
+10248,Vero Moda Floral Bodycon 248,Vero Moda,Dresses,4812,8020,40,3.3,39701,Tata Cliq Fashion,https://example.com/images/10248.jpg,https://example.com/product/10248
+10249,AND Floral Bodycon 249,AND,Dresses,1563,2112,26,4.3,79326,Craftsvilla,https://example.com/images/10249.jpg,https://example.com/product/10249
+10250,Wishful A-Line Kurta 250,Wishful,Kurtis & Suits,672,1083,38,4.3,75001,Nykaa Fashion,https://example.com/images/10250.jpg,https://example.com/product/10250
+10251,Biba Printed Kurta 251,Biba,Kurtis & Suits,2672,4687,43,4.0,53237,Craftsvilla,https://example.com/images/10251.jpg,https://example.com/product/10251
+10252,Caprese Leather Tote Bag 252,Caprese,Bags & Handbags,1594,4087,61,3.8,60885,Limeroad,https://example.com/images/10252.jpg,https://example.com/product/10252
+10253,Vardhaman Cotton Sari 253,Vardhaman,Sarees,2860,5200,45,4.5,45278,Nykaa Fashion,https://example.com/images/10253.jpg,https://example.com/product/10253
+10254,Tanishq Beaded Bracelet 254,Tanishq,Jewellery,38308,46717,18,3.6,61151,Flipkart Fashion,https://example.com/images/10254.jpg,https://example.com/product/10254
+10255,Puma Formal Leather Shoes 255,Puma,Footwear,1454,1751,17,3.1,50361,Ajio,https://example.com/images/10255.jpg,https://example.com/product/10255
+10256,Fastrack Chronograph Watch 256,Fastrack,Watches,11729,21325,45,3.4,20895,Nykaa Fashion,https://example.com/images/10256.jpg,https://example.com/product/10256
+10257,Lino Perros Sling Purse 257,Lino Perros,Bags & Handbags,4374,4703,7,3.2,51553,Tata Cliq Fashion,https://example.com/images/10257.jpg,https://example.com/product/10257
+10258,Baggit Designer Handbag 258,Baggit,Bags & Handbags,3190,3584,11,3.1,64876,Tata Cliq Fashion,https://example.com/images/10258.jpg,https://example.com/product/10258
+10259,Lavie Clutch Bag 259,Lavie,Bags & Handbags,366,446,18,3.9,34674,Amazon Fashion,https://example.com/images/10259.jpg,https://example.com/product/10259
+10260,Mimosa Georgette Printed Saree 260,Mimosa,Sarees,670,1522,56,3.1,73648,Limeroad,https://example.com/images/10260.jpg,https://example.com/product/10260
+10261,Vardhaman Georgette Printed Saree 261,Vardhaman,Sarees,902,1960,54,4.0,72080,Craftsvilla,https://example.com/images/10261.jpg,https://example.com/product/10261
+10262,H&M Maxi Dress 262,H&M,Dresses,3526,7345,52,4.6,44454,Tata Cliq Fashion,https://example.com/images/10262.jpg,https://example.com/product/10262
+10263,Nalli Cotton Sari 263,Nalli,Sarees,4470,10159,56,4.0,5948,Flipkart Fashion,https://example.com/images/10263.jpg,https://example.com/product/10263
+10264,Voylla Pearl Earrings 264,Voylla,Jewellery,54188,154822,65,4.0,19531,Tata Cliq Fashion,https://example.com/images/10264.jpg,https://example.com/product/10264
+10265,Tanishq Beaded Bracelet 265,Tanishq,Jewellery,22375,29833,25,3.8,39231,Tata Cliq Fashion,https://example.com/images/10265.jpg,https://example.com/product/10265
+10266,Vardhaman Chanderi Saree 266,Vardhaman,Sarees,4660,14121,67,4.4,39304,Nykaa Fashion,https://example.com/images/10266.jpg,https://example.com/product/10266
+10267,Aurelia Anarkali Kurti 267,Aurelia,Kurtis & Suits,1197,2850,58,4.2,3502,Tata Cliq Fashion,https://example.com/images/10267.jpg,https://example.com/product/10267
+10268,Lavie Clutch Bag 268,Lavie,Bags & Handbags,2164,2431,11,4.2,22359,Tata Cliq Fashion,https://example.com/images/10268.jpg,https://example.com/product/10268
+10269,Fastrack Chronograph Watch 269,Fastrack,Watches,2034,2511,19,3.4,57817,Craftsvilla,https://example.com/images/10269.jpg,https://example.com/product/10269
+10270,Fastrack Leather Strap Watch 270,Fastrack,Watches,23626,34240,31,3.8,61824,Ajio,https://example.com/images/10270.jpg,https://example.com/product/10270
+10271,Fabindia Straight Suit Set 271,Fabindia,Kurtis & Suits,4549,6592,31,4.1,62711,Tata Cliq Fashion,https://example.com/images/10271.jpg,https://example.com/product/10271
+10272,Sonata Chronograph Watch 272,Sonata,Watches,16062,59488,73,3.7,46447,Amazon Fashion,https://example.com/images/10272.jpg,https://example.com/product/10272
+10273,Adidas Strappy Sandals 273,Adidas,Footwear,1875,2929,36,3.6,39134,Limeroad,https://example.com/images/10273.jpg,https://example.com/product/10273
+10274,Crocs Casual Sneakers 274,Crocs,Footwear,1998,6054,67,3.6,45728,Tata Cliq Fashion,https://example.com/images/10274.jpg,https://example.com/product/10274
+10275,Mochi Running Shoes 275,Mochi,Footwear,4997,19219,74,3.8,51722,Ajio,https://example.com/images/10275.jpg,https://example.com/product/10275
+10276,Nalli Georgette Printed Saree 276,Nalli,Sarees,644,1091,41,4.9,10368,Craftsvilla,https://example.com/images/10276.jpg,https://example.com/product/10276
+10277,Puma Sling Purse 277,Puma,Bags & Handbags,4224,6211,32,3.4,70602,Craftsvilla,https://example.com/images/10277.jpg,https://example.com/product/10277
+10278,Metro Running Shoes 278,Metro,Footwear,2260,3531,36,3.1,69614,Limeroad,https://example.com/images/10278.jpg,https://example.com/product/10278
+10279,Crunchy Fashion Cat-Eye Sunglasses 279,Crunchy Fashion,Accessories,3685,6952,47,4.4,13188,Amazon Fashion,https://example.com/images/10279.jpg,https://example.com/product/10279
+10280,Joyalukkas Beaded Bracelet 280,Joyalukkas,Jewellery,11850,27558,57,4.3,62360,Nykaa Fashion,https://example.com/images/10280.jpg,https://example.com/product/10280
+10281,Zaveri Pearls Leather Belt 281,Zaveri Pearls,Accessories,2638,2997,12,4.8,11735,Amazon Fashion,https://example.com/images/10281.jpg,https://example.com/product/10281
+10282,Fastrack Cat-Eye Sunglasses 282,Fastrack,Accessories,1734,4128,58,4.8,23050,Flipkart Fashion,https://example.com/images/10282.jpg,https://example.com/product/10282
+10283,Casio Chronograph Watch 283,Casio,Watches,10485,11521,9,3.0,74453,Tata Cliq Fashion,https://example.com/images/10283.jpg,https://example.com/product/10283
+10284,Vero Moda Casual A-Line Dress 284,Vero Moda,Dresses,4022,15469,74,4.0,17599,Ajio,https://example.com/images/10284.jpg,https://example.com/product/10284
+10285,Lavie Designer Handbag 285,Lavie,Bags & Handbags,1222,2305,47,3.3,60160,Amazon Fashion,https://example.com/images/10285.jpg,https://example.com/product/10285
+10286,Nike Formal Leather Shoes 286,Nike,Footwear,415,798,48,4.6,74430,Amazon Fashion,https://example.com/images/10286.jpg,https://example.com/product/10286
+10287,YouBella Woolen Beanie 287,YouBella,Accessories,3621,8831,59,4.0,11378,Nykaa Fashion,https://example.com/images/10287.jpg,https://example.com/product/10287
+10288,H&M Floral Bodycon 288,H&M,Dresses,4211,7798,46,4.9,905,Craftsvilla,https://example.com/images/10288.jpg,https://example.com/product/10288
+10289,Fastrack Leather Strap Watch 289,Fastrack,Watches,9748,18392,47,3.6,75098,Flipkart Fashion,https://example.com/images/10289.jpg,https://example.com/product/10289
+10290,Nike Casual Sneakers 290,Nike,Footwear,2235,2539,12,4.3,61010,Craftsvilla,https://example.com/images/10290.jpg,https://example.com/product/10290
+10291,Giva Beaded Bracelet 291,Giva,Jewellery,59682,106575,44,4.4,38681,Craftsvilla,https://example.com/images/10291.jpg,https://example.com/product/10291
+10292,YouBella Silk Scarf 292,YouBella,Accessories,4217,5548,24,3.9,79405,Craftsvilla,https://example.com/images/10292.jpg,https://example.com/product/10292
+10293,Daniel Wellington Stainless Steel Watch 293,Daniel Wellington,Watches,16428,60844,73,4.6,28637,Ajio,https://example.com/images/10293.jpg,https://example.com/product/10293
+10294,Fastrack Cat-Eye Sunglasses 294,Fastrack,Accessories,4604,12115,62,4.1,47429,Flipkart Fashion,https://example.com/images/10294.jpg,https://example.com/product/10294
+10295,Zara Midi Dress 295,Zara,Dresses,4440,6342,30,4.1,19651,Limeroad,https://example.com/images/10295.jpg,https://example.com/product/10295
+10296,Vardhaman Kanchipuram Silk 296,Vardhaman,Sarees,1252,1814,31,4.4,64081,Flipkart Fashion,https://example.com/images/10296.jpg,https://example.com/product/10296
+10297,Caprese Travel Backpack 297,Caprese,Bags & Handbags,1380,4600,70,3.8,73922,Flipkart Fashion,https://example.com/images/10297.jpg,https://example.com/product/10297
+10298,Puma Sling Purse 298,Puma,Bags & Handbags,478,1062,55,3.5,405,Amazon Fashion,https://example.com/images/10298.jpg,https://example.com/product/10298
+10299,Fastrack Cat-Eye Sunglasses 299,Fastrack,Accessories,671,1636,59,3.7,8367,Tata Cliq Fashion,https://example.com/images/10299.jpg,https://example.com/product/10299
+10300,Wishful Patiala Suit 300,Wishful,Kurtis & Suits,559,947,41,3.8,17760,Ajio,https://example.com/images/10300.jpg,https://example.com/product/10300
+10301,Sonata Leather Strap Watch 301,Sonata,Watches,15697,33397,53,3.8,70697,Limeroad,https://example.com/images/10301.jpg,https://example.com/product/10301
+10302,Sabyasachi Cotton Sari 302,Sabyasachi,Sarees,4701,10446,55,4.1,29198,Ajio,https://example.com/images/10302.jpg,https://example.com/product/10302
+10303,Wishful Anarkali Kurti 303,Wishful,Kurtis & Suits,4092,15738,74,3.8,49722,Ajio,https://example.com/images/10303.jpg,https://example.com/product/10303
+10304,YouBella Hair Clip Set 304,YouBella,Accessories,3135,4125,24,3.6,14800,Flipkart Fashion,https://example.com/images/10304.jpg,https://example.com/product/10304
+10305,Fossil Analog Watch 305,Fossil,Watches,8886,12878,31,3.1,77859,Flipkart Fashion,https://example.com/images/10305.jpg,https://example.com/product/10305
+10306,Hidesign Leather Tote Bag 306,Hidesign,Bags & Handbags,2304,2560,10,3.8,30725,Tata Cliq Fashion,https://example.com/images/10306.jpg,https://example.com/product/10306
+10307,Crunchy Fashion Silk Scarf 307,Crunchy Fashion,Accessories,4427,7632,42,3.5,75521,Craftsvilla,https://example.com/images/10307.jpg,https://example.com/product/10307
+10308,Nalli Georgette Printed Saree 308,Nalli,Sarees,1473,5079,71,3.4,39397,Craftsvilla,https://example.com/images/10308.jpg,https://example.com/product/10308
+10309,W Printed Kurta 309,W,Kurtis & Suits,1734,4229,59,4.1,6155,Craftsvilla,https://example.com/images/10309.jpg,https://example.com/product/10309
+10310,Fossil Smart Fitness Band 310,Fossil,Watches,23816,56704,58,3.8,39316,Nykaa Fashion,https://example.com/images/10310.jpg,https://example.com/product/10310
+10311,Sukkhi Diamond Bangle 311,Sukkhi,Jewellery,17292,25808,33,3.6,18930,Ajio,https://example.com/images/10311.jpg,https://example.com/product/10311
+10312,Caprese Clutch Bag 312,Caprese,Bags & Handbags,3680,8761,58,4.1,17585,Nykaa Fashion,https://example.com/images/10312.jpg,https://example.com/product/10312
+10313,Zaveri Pearls Silk Scarf 313,Zaveri Pearls,Accessories,3005,3535,15,4.8,48647,Flipkart Fashion,https://example.com/images/10313.jpg,https://example.com/product/10313
+10314,Crunchy Fashion Leather Belt 314,Crunchy Fashion,Accessories,3389,3765,10,4.7,24672,Ajio,https://example.com/images/10314.jpg,https://example.com/product/10314
+10315,Lenskart Silk Scarf 315,Lenskart,Accessories,3027,5310,43,4.9,2019,Limeroad,https://example.com/images/10315.jpg,https://example.com/product/10315
+10316,Crunchy Fashion Hair Clip Set 316,Crunchy Fashion,Accessories,2287,3314,31,3.8,31379,Tata Cliq Fashion,https://example.com/images/10316.jpg,https://example.com/product/10316
+10317,Fabindia Kanchipuram Silk 317,Fabindia,Sarees,4119,15255,73,4.3,40435,Craftsvilla,https://example.com/images/10317.jpg,https://example.com/product/10317
+10318,Vardhaman Kanchipuram Silk 318,Vardhaman,Sarees,4117,4960,17,4.6,61547,Ajio,https://example.com/images/10318.jpg,https://example.com/product/10318
+10319,Nalli Georgette Printed Saree 319,Nalli,Sarees,2863,6658,57,3.1,29012,Amazon Fashion,https://example.com/images/10319.jpg,https://example.com/product/10319
+10320,Joyalukkas Pearl Earrings 320,Joyalukkas,Jewellery,37761,89907,58,3.6,25725,Craftsvilla,https://example.com/images/10320.jpg,https://example.com/product/10320
+10321,Lenskart Woolen Beanie 321,Lenskart,Accessories,2313,7228,68,4.1,44255,Craftsvilla,https://example.com/images/10321.jpg,https://example.com/product/10321
+10322,Puma Travel Backpack 322,Puma,Bags & Handbags,4075,5506,26,4.5,46170,Limeroad,https://example.com/images/10322.jpg,https://example.com/product/10322
+10323,Voylla Beaded Bracelet 323,Voylla,Jewellery,33502,46530,28,4.8,71068,Amazon Fashion,https://example.com/images/10323.jpg,https://example.com/product/10323
+10324,W A-Line Kurta 324,W,Kurtis & Suits,908,1020,11,4.5,54063,Limeroad,https://example.com/images/10324.jpg,https://example.com/product/10324
+10325,Crunchy Fashion Silk Scarf 325,Crunchy Fashion,Accessories,374,550,32,4.0,48926,Flipkart Fashion,https://example.com/images/10325.jpg,https://example.com/product/10325
+10326,Puma Travel Backpack 326,Puma,Bags & Handbags,428,450,5,4.1,53924,Flipkart Fashion,https://example.com/images/10326.jpg,https://example.com/product/10326
+10327,W Anarkali Kurti 327,W,Kurtis & Suits,4688,7945,41,3.0,56446,Ajio,https://example.com/images/10327.jpg,https://example.com/product/10327
+10328,Joyalukkas Silver Necklace 328,Joyalukkas,Jewellery,35866,47192,24,3.5,69013,Craftsvilla,https://example.com/images/10328.jpg,https://example.com/product/10328
+10329,Fabindia Kanchipuram Silk 329,Fabindia,Sarees,947,1972,52,4.9,60171,Tata Cliq Fashion,https://example.com/images/10329.jpg,https://example.com/product/10329
+10330,YouBella Leather Belt 330,YouBella,Accessories,960,1054,9,3.2,49720,Nykaa Fashion,https://example.com/images/10330.jpg,https://example.com/product/10330
+10331,Caprese Leather Tote Bag 331,Caprese,Bags & Handbags,1703,2003,15,4.0,56883,Amazon Fashion,https://example.com/images/10331.jpg,https://example.com/product/10331
+10332,Vardhaman Banarasi Silk Saree 332,Vardhaman,Sarees,4626,5140,10,3.5,74299,Nykaa Fashion,https://example.com/images/10332.jpg,https://example.com/product/10332
+10333,Bata Running Shoes 333,Bata,Footwear,2596,9984,74,4.1,4322,Limeroad,https://example.com/images/10333.jpg,https://example.com/product/10333
+10334,Sabyasachi Cotton Sari 334,Sabyasachi,Sarees,1481,3291,55,4.9,39236,Limeroad,https://example.com/images/10334.jpg,https://example.com/product/10334
+10335,Fastrack Hair Clip Set 335,Fastrack,Accessories,4728,8920,47,3.8,18353,Ajio,https://example.com/images/10335.jpg,https://example.com/product/10335
+10336,AND Casual A-Line Dress 336,AND,Dresses,739,890,17,3.9,9973,Craftsvilla,https://example.com/images/10336.jpg,https://example.com/product/10336
+10337,Sonata Analog Watch 337,Sonata,Watches,21778,35701,39,4.6,59064,Nykaa Fashion,https://example.com/images/10337.jpg,https://example.com/product/10337
+10338,Zaveri Pearls Woolen Beanie 338,Zaveri Pearls,Accessories,3375,8437,60,3.4,76801,Amazon Fashion,https://example.com/images/10338.jpg,https://example.com/product/10338
+10339,Titan Stainless Steel Watch 339,Titan,Watches,10678,16684,36,4.4,10762,Craftsvilla,https://example.com/images/10339.jpg,https://example.com/product/10339
+10340,Giva Gold Plated Ring 340,Giva,Jewellery,49974,108639,54,3.6,13975,Flipkart Fashion,https://example.com/images/10340.jpg,https://example.com/product/10340
+10341,Aurelia Patiala Suit 341,Aurelia,Kurtis & Suits,3248,5324,39,3.2,11452,Limeroad,https://example.com/images/10341.jpg,https://example.com/product/10341
+10342,Casio Stainless Steel Watch 342,Casio,Watches,19177,63923,70,3.8,3452,Flipkart Fashion,https://example.com/images/10342.jpg,https://example.com/product/10342
+10343,Vardhaman Banarasi Silk Saree 343,Vardhaman,Sarees,2957,6428,54,3.0,54248,Nykaa Fashion,https://example.com/images/10343.jpg,https://example.com/product/10343
