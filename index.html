@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For It — Find the Cheapest Price</title>
+<meta name="description" content="For It is a premium real-time price comparison search engine that searches across 13 Indian e-commerce platforms to find the lowest price instantly." />
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg:        #060912;
+    --surface:   #0d1321;
+    --surface2:  #141b2d;
+    --border:    rgba(255,255,255,0.07);
+    --accent:    #00e5a0;
+    --accent2:   #00b5ff;
+    --danger:    #ff4d6d;
+    --text:      #e8edf5;
+    --muted:     #6b7a99;
+    --gold:      #ffd700;
+    --radius:    14px;
+    --glow:      0 0 40px rgba(0,229,160,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #060912;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── PREMIUM CITYSCAPE GLOW BACKGROUND ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      linear-gradient(rgba(6, 9, 18, 0.88), rgba(6, 9, 18, 0.94)),
+      url('bargain_bg.jpg') no-repeat center center / cover;
+    pointer-events: none; z-index: 0;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    background: rgba(6,9,18,0.7);
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem; font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .logo span { color: var(--muted); font-weight: 400; font-size: 0.75rem; display: block; letter-spacing: 0.1em; text-transform: uppercase; -webkit-text-fill-color: var(--muted); }
+  .tag {
+    background: rgba(0,229,160,0.1);
+    border: 1px solid rgba(0,229,160,0.2);
+    color: var(--accent);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; z-index: 5;
+    text-align: center;
+    padding: 70px 24px 50px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 14px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero p { color: var(--muted); font-size: 1.05rem; max-width: 500px; margin: 0 auto 40px; line-height: 1.6; }
+
+  /* ── SEARCH BOX ── */
+  .search-wrap {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .search-box {
+    display: flex;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    transition: border-color .3s, box-shadow .3s;
+  }
+  .search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: var(--glow);
+  }
+  .search-box input {
+    flex: 1;
+    background: transparent;
+    border: none; outline: none;
+    padding: 18px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  .search-box input::placeholder { color: var(--muted); }
+  .search-btn {
+    background: linear-gradient(135deg, var(--accent), #00c87a);
+    border: none; cursor: pointer;
+    padding: 14px 32px;
+    margin: 6px;
+    border-radius: 999px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 0.9rem;
+    color: #060912;
+    letter-spacing: 0.03em;
+    transition: transform .2s, opacity .2s;
+    white-space: nowrap;
+  }
+  .search-btn:hover { transform: scale(1.03); }
+  .search-btn:active { transform: scale(0.98); }
+  .search-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  /* ── PLATFORM FILTER ── */
+  .filter-section {
+    position: relative; z-index: 5;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    padding: 0 24px;
+  }
+  .filter-label {
+    font-size: 0.75rem; font-weight: 500; color: var(--muted);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .platform-chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .chip {
+    display: flex; align-items: center; gap: 6px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.8rem; font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+    user-select: none;
+  }
+  .chip.active {
+    border-color: var(--accent);
+    background: rgba(0,229,160,0.1);
+    color: var(--accent);
+  }
+  .chip:hover { border-color: var(--muted); }
+  .chip-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .chip-logo {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #fff;
+    padding: 1px;
+    flex-shrink: 0;
+    transition: filter .2s, opacity .2s;
+  }
+  .chip-fallback {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    display: none;
+    align-items: center; justify-content: center;
+    font-size: 8px; font-weight: 800;
+    flex-shrink: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-right: 6px;
+  }
+  .chip:not(.active) .chip-logo {
+    filter: grayscale(1);
+    opacity: 0.6;
+  }
+  .select-all {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem; font-weight: 700;
+    color: var(--accent2);
+    background: none; border: none;
+    cursor: pointer; padding: 4px 0;
+    letter-spacing: 0.05em;
+    transition: opacity .2s;
+  }
+  .select-all:hover { opacity: 0.7; }
+
+  /* ── STATUS BAR ── */
+  .status-bar {
+    position: relative; z-index: 5;
+    max-width: 1000px; margin: 0 auto 28px;
+    padding: 0 24px;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 0.82rem; color: var(--muted);
+    min-height: 24px;
+  }
+  .spinner {
+    width: 16px; height: 16px;
+    border: 2px solid rgba(0,229,160,0.2);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .pulse-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 1.4s ease infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+  /* ── CHEAPEST BANNER ── */
+  #cheapest-banner {
+    position: relative; z-index: 5;
+    max-width: 1000px; margin: 0 auto 32px;
+    padding: 0 24px;
+    display: none;
+  }
+  .banner-card {
+    background: linear-gradient(135deg, rgba(0,229,160,0.12), rgba(0,181,255,0.08));
+    border: 1.5px solid rgba(0,229,160,0.3);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    display: flex; align-items: center; gap: 20px;
+    box-shadow: 0 0 60px rgba(0,229,160,0.1);
+    animation: fadeUp .4s ease;
+  }
+  .banner-badge {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #060912;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .banner-img {
+    width: 60px; height: 60px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: white;
+    padding: 4px;
+    flex-shrink: 0;
+  }
+  .banner-info { flex: 1; min-width: 0; }
+  .banner-platform {
+    font-size: 0.72rem; font-weight: 600; color: var(--accent);
+    letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 3px;
+  }
+  .banner-title {
+    font-size: 1rem; font-weight: 500;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    margin-bottom: 4px;
+  }
+  .banner-savings { font-size: 0.8rem; color: var(--muted); }
+  .banner-savings strong { color: var(--accent); }
+  .banner-price {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem; font-weight: 800;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .banner-cta {
+    background: var(--accent);
+    color: #060912;
+    border: none; cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 0.85rem;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform .2s;
+  }
+  .banner-cta:hover { transform: scale(1.04); }
+
+  /* ── RESULTS GRID ── */
+  #results-section {
+    position: relative; z-index: 5;
+    max-width: 1000px; margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+  .results-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .results-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.85rem; font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .sort-select {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer; outline: none;
+  }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .result-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+    animation: fadeUp .4s ease backwards;
+    cursor: pointer;
+  }
+  .result-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.14);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+  .result-card.rank-1 {
+    border-color: rgba(0,229,160,0.4);
+    box-shadow: 0 0 30px rgba(0,229,160,0.08);
+  }
+  .result-card.rank-1:hover { border-color: var(--accent); }
+  .card-image-wrap {
+    background: white;
+    height: 160px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+  }
+  .card-image-wrap img {
+    max-width: 90%; max-height: 90%;
+    object-fit: contain;
+    transition: transform .3s;
+  }
+  .result-card:hover .card-image-wrap img { transform: scale(1.05); }
+  .card-rank {
+    position: absolute; top: 8px; left: 8px;
+    background: var(--gold);
+    color: #060912;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem; font-weight: 800;
+  }
+  .card-body { padding: 14px; }
+  .card-platform {
+    display: flex; align-items: center; gap: 6px;
+    margin-bottom: 6px;
+  }
+  .platform-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  }
+  .platform-logo {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #fff;
+    padding: 1px;
+    flex-shrink: 0;
+  }
+  .platform-name {
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .card-title {
+    font-size: 0.85rem; color: var(--text);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 12px;
+    min-height: 2.4em;
+  }
+  .card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px;
+  }
+  .card-price {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem; font-weight: 800;
+    color: var(--text);
+  }
+  .result-card.rank-1 .card-price { color: var(--accent); }
+  .card-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px;
+    background: var(--surface2);
+    border-radius: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background .2s, color .2s;
+    flex-shrink: 0;
+  }
+  .card-link:hover { background: var(--accent); color: #060912; }
+
+  /* ── PLATFORM GROUP VIEW ── */
+  .platform-group-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--muted);
+    margin: 24px 0 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .platform-group-label::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--border);
+  }
+
+  /* ── EMPTY STATE ── */
+  .empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--muted);
+  }
+  .empty-icon { font-size: 3rem; margin-bottom: 16px; }
+  .empty-state h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; color: var(--text); margin-bottom: 8px; }
+
+  /* ── VIEW TOGGLE ── */
+  .view-btns {
+    display: flex; gap: 4px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3px;
+  }
+  .view-btn {
+    background: none; border: none; cursor: pointer;
+    padding: 5px 10px; border-radius: 6px;
+    color: var(--muted); font-size: 0.85rem;
+    transition: background .2s, color .2s;
+  }
+  .view-btn.active { background: var(--surface2); color: var(--text); }
+
+  /* ── TABLE VIEW ── */
+  .results-table {
+    width: 100%; border-collapse: collapse;
+    display: none;
+  }
+  .results-table.visible { display: table; }
+  .results-table th {
+    text-align: left;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.72rem; font-weight: 700;
+    color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .results-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.88rem;
+    vertical-align: middle;
+  }
+  .results-table tr:hover td { background: var(--surface); }
+  .results-table .rank-cell {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    color: var(--muted);
+  }
+  .results-table tr:first-child .rank-cell { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-size: 0.85rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    animation: toastIn .3s ease, toastOut .3s ease 2.4s forwards;
+    z-index: 1000;
+    white-space: nowrap;
+  }
+  @keyframes toastIn { from { opacity:0; transform: translateX(-50%) translateY(10px); } to { opacity:1; transform: translateX(-50%) translateY(0); } }
+  @keyframes toastOut { to { opacity:0; transform: translateX(-50%) translateY(10px); } }
+
+  /* ── LAYOUT CONTAINER ── */
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  /* ── SIDEBAR FILTERS ── */
+  .sidebar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    height: fit-content;
+    position: sticky;
+    top: 90px; /* Offset sticky header height */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.08);
+    border-radius: 99px;
+  }
+  .sidebar-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sidebar-title::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--border);
+  }
+  .filter-group {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .filter-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .filter-group-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent2);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .filter-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color .2s;
+    user-select: none;
+    margin-bottom: 6px;
+  }
+  .filter-radio-label:hover {
+    color: var(--text);
+  }
+  .filter-radio-label input[type="radio"] {
+    accent-color: var(--accent);
+    cursor: pointer;
+    width: 14px; height: 14px;
+  }
+  .sidebar-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color .2s;
+    user-select: none;
+    margin-bottom: 6px;
+  }
+  .sidebar-checkbox-label:hover {
+    color: var(--text);
+  }
+  .sidebar-checkbox-label input[type="checkbox"] {
+    accent-color: var(--accent);
+    cursor: pointer;
+    width: 14px; height: 14px;
+  }
+  
+  /* ── CONTENT AREA ── */
+  .content {
+    min-width: 0; /* Prevent flex blowout */
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .main-container {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .sidebar {
+      position: relative;
+      top: 0;
+      max-height: none;
+    }
+  @media (max-width: 600px) {
+    header { padding: 16px 20px; }
+    .hero { padding: 50px 16px 36px; }
+    .results-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .banner-card { flex-wrap: wrap; }
+    .banner-price { font-size: 1.5rem; }
+    #results-section, .status-bar, #cheapest-banner { padding: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+    <svg class="logo-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 10px rgba(0, 229, 160, 0.45)); flex-shrink: 0;">
+      <defs>
+        <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--accent)"></stop>
+          <stop offset="100%" stop-color="var(--accent2)"></stop>
+        </linearGradient>
+      </defs>
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+      <circle cx="7" cy="7" r="1" fill="url(#logo-grad)" stroke="none"></circle>
+    </svg>
+    <div>
+      Bargain Here
+      <span>Cheapest Price Finder</span>
+    </div>
+  </div>
+  <div class="tag">🇮🇳 13 Platforms</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Find the <em>cheapest price</em><br/>across every platform</h1>
+  <p>Compare prices across 13 Indian e-commerce platforms. Search any item and find the best deals within your budget!</p>
+
+  <div class="search-wrap">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search for phones, shoes, lipstick, rice..." autocomplete="off"/>
+      <button class="search-btn" id="search-btn" onclick="doSearch()">🔍 Compare</button>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTAINER LAYOUT -->
+<div class="main-container">
+  
+  <!-- SIDEBAR FILTERS (LEFT) -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Filters</div>
+
+    <!-- Budget Filter Section -->
+    <div class="filter-group">
+      <div class="filter-group-title">Budget Range</div>
+      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <div style="flex: 1;">
+          <label style="font-size: 0.65rem; color: var(--muted); display: block; margin-bottom: 4px; text-transform: uppercase;">Min Price</label>
+          <input type="number" id="budget-min" value="100" min="0" oninput="syncBudgetSlider(); doFilter();" style="width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 6px; color: var(--text); font-family: inherit; font-size: 0.85rem; outline: none;"/>
+        </div>
+        <div style="flex: 1;">
+          <label style="font-size: 0.65rem; color: var(--muted); display: block; margin-bottom: 4px; text-transform: uppercase;">Max Price</label>
+          <input type="number" id="budget-max" value="50000" min="0" oninput="syncBudgetSlider(); doFilter();" style="width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 6px; color: var(--text); font-family: inherit; font-size: 0.85rem; outline: none;"/>
+        </div>
+      </div>
+      <input type="range" id="budget-slider" min="0" max="100000" step="100" value="50000" oninput="syncBudgetInputs(); doFilter();" style="width: 100%; accent-color: var(--accent); cursor: pointer;"/>
+      <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: var(--muted); margin-top: 4px;">
+        <span>₹0</span>
+        <span>₹100k+</span>
+      </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="filter-group">
+      <div class="filter-group-title">Category</div>
+      <select id="category-filter" onchange="doFilter()" style="width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 8px; color: var(--text); font-family: inherit; font-size: 0.85rem; cursor: pointer; outline: none;">
+        <option value="all" selected>All Categories</option>
+        <option value="tablets">Tablets</option>
+        <option value="laptops">Laptops</option>
+        <option value="cameras">Cameras</option>
+        <option value="home_appliances">Home Appliances</option>
+        <option value="televisions">Televisions</option>
+        <option value="headphones">Headphones</option>
+        <option value="smartphones">Smartphones</option>
+        <option value="smartwatches">Smartwatches</option>
+        <option value="kurtis_suits">Kurtis & Suits</option>
+        <option value="dresses">Dresses</option>
+        <option value="jewellery">Jewellery</option>
+        <option value="accessories">Accessories</option>
+        <option value="footwear">Footwear</option>
+        <option value="sarees">Sarees</option>
+        <option value="watches">Watches</option>
+        <option value="bags_handbags">Bags & Handbags</option>
+      </select>
+    </div>
+
+    <!-- Platforms Filter Checkboxes -->
+    <div class="filter-group">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <div class="filter-group-title" style="margin-bottom: 0;">Platforms</div>
+        <button class="select-all" onclick="toggleAll()">Toggle All</button>
+      </div>
+      <div id="sidebar-platforms" style="display: flex; flex-direction: column; gap: 8px; max-height: 200px; overflow-y: auto; padding-right: 4px;">
+        <!-- Injected dynamically in init() -->
+      </div>
+    </div>
+
+    <!-- Brand Filter Checkboxes (Dynamic) -->
+    <div class="filter-group">
+      <div class="filter-group-title">Brand</div>
+      <div id="sidebar-brands" style="display: flex; flex-direction: column; gap: 8px; max-height: 160px; overflow-y: auto; padding-right: 4px;">
+        <div style="font-size: 0.75rem; color: var(--muted); font-style: italic;">Search a product first...</div>
+      </div>
+    </div>
+
+    <!-- Rating Filter -->
+    <div class="filter-group">
+      <div class="filter-group-title">Minimum Rating</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <label class="filter-radio-label">
+          <input type="radio" name="rating-filter" value="0" checked onclick="doFilter()"/>
+          <span>Show All</span>
+        </label>
+        <label class="filter-radio-label">
+          <input type="radio" name="rating-filter" value="4.5" onclick="doFilter()"/>
+          <span>⭐ 4.5+ Stars</span>
+        </label>
+        <label class="filter-radio-label">
+          <input type="radio" name="rating-filter" value="4.0" onclick="doFilter()"/>
+          <span>⭐ 4.0+ Stars</span>
+        </label>
+        <label class="filter-radio-label">
+          <input type="radio" name="rating-filter" value="3.5" onclick="doFilter()"/>
+          <span>⭐ 3.5+ Stars</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Discount Filter -->
+    <div class="filter-group">
+      <div class="filter-group-title">Discount Offer</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <label class="filter-radio-label">
+          <input type="radio" name="discount-filter" value="0" checked onclick="doFilter()"/>
+          <span>Any Discount</span>
+        </label>
+        <label class="filter-radio-label">
+          <input type="radio" name="discount-filter" value="40" onclick="doFilter()"/>
+          <span>💥 40% Off or More</span>
+        </label>
+        <label class="filter-radio-label">
+          <input type="radio" name="discount-filter" value="30" onclick="doFilter()"/>
+          <span>💥 30% Off or More</span>
+        </label>
+        <label class="filter-radio-label">
+          <input type="radio" name="discount-filter" value="20" onclick="doFilter()"/>
+          <span>💥 20% Off or More</span>
+        </label>
+        <label class="filter-radio-label">
+          <input type="radio" name="discount-filter" value="10" onclick="doFilter()"/>
+          <span>💥 10% Off or More</span>
+        </label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTENT VIEW AREA (RIGHT) -->
+  <main class="content">
+    
+    <!-- STATUS BAR -->
+    <div class="status-bar" id="status-bar" style="margin: 0 0 16px; padding: 0;"></div>
+
+    <!-- CHEAPEST SPOTLIGHT BANNER -->
+    <div id="cheapest-banner" style="max-width: 100%; margin: 0 0 24px; padding: 0;">
+      <div class="banner-card" id="banner-card"></div>
+    </div>
+
+    <!-- RESULTS COMPONENT -->
+    <section id="results-section">
+      <div class="results-header" id="results-header" style="display: none; margin-bottom: 16px;">
+        <div class="results-title" id="results-count"></div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <label style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 600; color: var(--muted); cursor: pointer; user-select: none; background: var(--surface); border: 1px solid var(--border); padding: 6px 12px; border-radius: 8px;">
+            <input type="checkbox" id="cheapest-only-check" onchange="doFilter()" checked style="accent-color: var(--accent); cursor: pointer; width: 14px; height: 14px;"/>
+            Cheapest Only Per App
+          </label>
+          <select class="sort-select" id="sort-select" onchange="doFilter()">
+            <option value="price_asc" selected>Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="rating_desc">Top Rated</option>
+            <option value="discount_desc">Best Discount</option>
+            <option value="platform">By Platform</option>
+          </select>
+          <div class="view-btns">
+            <button class="view-btn active" id="grid-btn" onclick="setView('grid')">⊞</button>
+            <button class="view-btn" id="table-btn" onclick="setView('table')">☰</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card Grid -->
+      <div class="results-grid" id="results-grid"></div>
+
+      <!-- Result List Table -->
+      <table class="results-table" id="results-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Platform</th>
+            <th>Product Name</th>
+            <th>Rating</th>
+            <th>Discount</th>
+            <th>Price</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+  </main>
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+const API_BASE = "http://localhost:5000"; // Your Python backend URL
+
+const PLATFORM_META = {
+  amazon:    { label: "Amazon",    color: "#FF9900", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
+  flipkart:  { label: "Flipkart",  color: "#2874F0", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg" },
+  meesho:    { label: "Meesho",    color: "#F43397", logo: "https://images.meesho.com/images/marketing/1655285313128.png" },
+  myntra:    { label: "Myntra",    color: "#FF3F6C", logo: "https://constant.myntassets.com/web/assets/img/logo_myntra2x.png" },
+  jiomart:   { label: "JioMart",   color: "#0060A9", logo: "https://upload.wikimedia.org/wikipedia/commons/e/e5/JioMart_logo.svg" },
+  shopsy:    { label: "Shopsy",    color: "#F7A400", logo: "https://shopsy.in/favicon.ico" },
+  blinkit:   { label: "Blinkit",   color: "#0C831F", logo: "https://blinkit.com/favicon.png" },
+  instamart: { label: "Instamart", color: "#FC8019", logo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/swiggy_logo.png" },
+  purplle:   { label: "Purplle",   color: "#8B5CF6", logo: "https://www.purplle.com/images/purplle-logo.png" },
+  tira:      { label: "Tira",      color: "#E91E8C", logo: "https://www.tirabeauty.com/favicon.ico" },
+  newme:     { label: "NewMe",     color: "#1a1a1a", logo: "https://www.newme.asia/favicon.ico" },
+  ajio:      { label: "Ajio",      color: "#2C3E50", logo: "https://www.ajio.com/favicon.ico" },
+  nykaa:     { label: "Nykaa",     color: "#FC2779", logo: "https://www.nykaa.com/favicon.ico" },
+  tata_cliq: { label: "Tata Cliq", color: "#000000", logo: "https://www.tatacliq.com/favicon.ico" },
+  snapdeal:  { label: "Snapdeal",  color: "#E40046", logo: "https://www.snapdeal.com/favicon.ico" },
+  croma:     { label: "Croma",     color: "#00E9C0", logo: "https://www.croma.com/favicon.ico" },
+  vijay_sales: { label: "Vijay Sales", color: "#D12229", logo: "https://www.vijaysales.com/favicon.ico" },
+  reliance_digital: { label: "Reliance Digital", color: "#E42526", logo: "https://www.reliancedigital.in/favicon.ico" },
+  paytm_mall: { label: "Paytm Mall", color: "#00B9F1", logo: "https://paytmmall.com/favicon.ico" },
+  shopclues:  { label: "ShopClues", color: "#24A3B5", logo: "https://www.shopclues.com/favicon.ico" },
+  indiamart:  { label: "IndiaMart", color: "#005999", logo: "https://www.indiamart.com/favicon.ico" },
+  bigbasket:  { label: "BigBasket", color: "#84c225", logo: "https://www.bigbasket.com/favicon.ico" },
+  flipkart_fashion: { label: "Flipkart Fashion", color: "#2874F0", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg" },
+  limeroad:   { label: "Limeroad",   color: "#99CC33", logo: "https://www.limeroad.com/favicon.ico" },
+  craftsvilla: { label: "Craftsvilla", color: "#9C27B0", logo: "https://www.craftsvilla.com/favicon.ico" },
+  nykaa_fashion: { label: "Nykaa Fashion", color: "#FC2779", logo: "https://www.nykaa.com/favicon.ico" },
+  tata_cliq_fashion: { label: "Tata Cliq Fashion", color: "#000000", logo: "https://www.tatacliq.com/favicon.ico" },
+  amazon_fashion: { label: "Amazon Fashion", color: "#FF9900", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" }
+};
+
+// ── STATE ────────────────────────────────────────────────────────────────────
+let currentResults = [];
+let currentView = "grid";
+let lastQuery = "";
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+function init() {
+  const container = document.getElementById("sidebar-platforms");
+  container.innerHTML = "";
+  
+  for (const [key, meta] of Object.entries(PLATFORM_META)) {
+    const lbl = document.createElement("label");
+    lbl.className = "sidebar-checkbox-label platform-check";
+    lbl.style.display = "flex";
+    lbl.style.alignItems = "center";
+    lbl.style.gap = "8px";
+    lbl.innerHTML = `
+      <input type="checkbox" value="${key}" checked onchange="doFilter()"/>
+      <img src="${meta.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" alt="" style="width:14px; height:14px; border-radius:50%; object-fit:contain; background:#fff; padding:1px; flex-shrink:0;"/>
+      <span class="platform-fallback" style="display:none; width:14px; height:14px; border-radius:50%; background:${meta.color}; color:#fff; align-items:center; justify-content:center; font-size:8px; font-weight:800; flex-shrink:0; line-height:1; text-transform:uppercase;">${meta.label[0]}</span>
+      <span>${meta.label}</span>
+    `;
+    container.appendChild(lbl);
+  }
+  
+  document.getElementById("search-input").addEventListener("keydown", e => {
+    if (e.key === "Enter") doSearch();
+  });
+}
+
+function toggleAll() {
+  const checks = document.querySelectorAll(".platform-check input");
+  const anyUnchecked = Array.from(checks).some(c => !c.checked);
+  checks.forEach(c => c.checked = anyUnchecked);
+  doFilter();
+}
+
+function syncBudgetSlider() {
+  const maxVal = parseFloat(document.getElementById("budget-max").value) || 0;
+  const slider = document.getElementById("budget-slider");
+  if (maxVal <= slider.max) {
+    slider.value = maxVal;
+  } else {
+    slider.value = slider.max;
+  }
+}
+
+function syncBudgetInputs() {
+  const sliderVal = document.getElementById("budget-slider").value;
+  document.getElementById("budget-max").value = sliderVal;
+}
+
+// ── BRAND CHECKBOX RENDERING (DYNAMIC) ───────────────────────────────────────
+function renderBrandCheckboxes(results) {
+  const container = document.getElementById("sidebar-brands");
+  container.innerHTML = "";
+  
+  const brands = Array.from(new Set(results.map(r => r.brand))).filter(Boolean).sort();
+  if (brands.length === 0) {
+    container.innerHTML = `<div style="font-size:0.75rem; color:var(--muted); font-style:italic;">No brands available</div>`;
+    return;
+  }
+  
+  brands.forEach(b => {
+    const lbl = document.createElement("label");
+    lbl.className = "sidebar-checkbox-label";
+    lbl.innerHTML = `<input type="checkbox" value="${b}" onchange="doFilter()"/><span>${b}</span>`;
+    container.appendChild(lbl);
+  });
+}
+
+// ── SEARCH INVOCATION ────────────────────────────────────────────────────────
+async function doSearch() {
+  const query = document.getElementById("search-input").value.trim();
+  if (!query) { showToast("Please enter a search term!"); return; }
+
+  // Extract currently selected platforms for database routing
+  const activePlats = [];
+  const checks = document.querySelectorAll(".platform-check input:checked");
+  checks.forEach(c => activePlats.push(c.value));
+  
+  if (activePlats.length === 0) { showToast("Select at least one platform in the sidebar!"); return; }
+
+  lastQuery = query;
+  const btn = document.getElementById("search-btn");
+  btn.disabled = true;
+  btn.textContent = "Searching…";
+
+  setStatus("spinner", `Searching platforms for "${query}"…`);
+  hideBanner();
+  clearResults();
+
+  try {
+    const params = new URLSearchParams({
+      q: query,
+      platforms: activePlats.join(","),
+    });
+    const res = await fetch(`${API_BASE}/api/search?${params}`);
+    if (!res.ok) throw new Error(`Server error ${res.status}`);
+    const data = await res.json();
+
+    currentResults = data.results || [];
+    renderBrandCheckboxes(currentResults);
+    doFilter();
+
+    const msg = currentResults.length
+      ? `Found ${currentResults.length} results across ${data.platforms_searched.length} platforms`
+      : `No results found for "${query}"`;
+    setStatus("dot", msg);
+  } catch (err) {
+    setStatus("dot", `⚠️ ${err.message}. Is the backend running? (python choukasi_backend.py)`);
+    showToast("Backend not reachable — start the Python server!");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "🔍 Compare";
+  }
+}
+
+// ── FILTERING PIPELINE (APPLIED BEFORE RENDERING) ─────────────────────────────
+function doFilter() {
+  const minBudget = parseFloat(document.getElementById("budget-min").value) || 0;
+  const maxBudget = parseFloat(document.getElementById("budget-max").value) || Infinity;
+  const selectedCategory = document.getElementById("category-filter").value;
+  
+  // Selected platform checkboxes
+  const selectedPlats = [];
+  const platChecks = document.querySelectorAll(".platform-check input:checked");
+  platChecks.forEach(chk => selectedPlats.push(chk.value.toLowerCase()));
+  
+  // Selected brand checkboxes
+  const selectedBrands = [];
+  const brandChecks = document.querySelectorAll("#sidebar-brands input:checked");
+  brandChecks.forEach(chk => selectedBrands.push(chk.value));
+  
+  // Selected Rating radio
+  const ratingRadio = document.querySelector('input[name="rating-filter"]:checked');
+  const minRating = ratingRadio ? parseFloat(ratingRadio.value) : 0;
+  
+  // Selected Discount radio
+  const discountRadio = document.querySelector('input[name="discount-filter"]:checked');
+  const minDiscount = discountRadio ? parseFloat(discountRadio.value) : 0;
+  
+  let filtered = currentResults.filter(item => {
+    const price = item.price ?? 0;
+    
+    // 1. Budget Boundary check (Applied strictly BEFORE display)
+    if (price < minBudget || price > maxBudget) return false;
+    
+    // 2. Metadata filtering checks
+    if (selectedCategory !== "all" && item.category !== selectedCategory) return false;
+    if (selectedPlats.length > 0 && !selectedPlats.includes(item.platform.toLowerCase())) return false;
+    if (selectedBrands.length > 0 && !selectedBrands.includes(item.brand)) return false;
+    if (minRating > 0 && (item.rating ?? 0) < minRating) return false;
+    if (minDiscount > 0 && (item.discount_pct ?? 0) < minDiscount) return false;
+    
+    return true;
+  });
+  
+  // Group by platform and only keep the cheapest/starting price item per platform if checked
+  if (document.getElementById("cheapest-only-check").checked) {
+    const cheapestMap = new Map();
+    const priceSorted = [...filtered].sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
+    priceSorted.forEach(item => {
+      const plat = item.platform.toLowerCase();
+      if (!cheapestMap.has(plat)) {
+        cheapestMap.set(plat, item);
+      }
+    });
+    filtered = Array.from(cheapestMap.values());
+  }
+
+  // Apply sorting rules (Default is price_asc: Price Low to High)
+  const sortVal = document.getElementById("sort-select").value;
+  if (sortVal === "price_asc") {
+    filtered.sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
+  } else if (sortVal === "price_desc") {
+    filtered.sort((a, b) => (b.price ?? -Infinity) - (a.price ?? -Infinity));
+  } else if (sortVal === "rating_desc") {
+    filtered.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+  } else if (sortVal === "discount_desc") {
+    filtered.sort((a, b) => (b.discount_pct ?? 0) - (a.discount_pct ?? 0));
+  } else if (sortVal === "platform") {
+    filtered.sort((a, b) => a.platform.localeCompare(b.platform));
+  }
+
+  // Display results
+  renderGrid(filtered);
+  renderTable(filtered);
+
+  // Spotlight Banner "Best Deal" badge for the cheapest option
+  const cheapest = filtered.length > 0 ? filtered[0] : null;
+  if (cheapest) {
+    showBanner(cheapest, filtered);
+  } else {
+    hideBanner();
+  }
+
+  // Render Header Counts
+  const header = document.getElementById("results-header");
+  const countEl = document.getElementById("results-count");
+  if (currentResults.length > 0) {
+    header.style.display = "flex";
+    if (filtered.length > 0) {
+      countEl.textContent = `${filtered.length} results for "${lastQuery}"`;
+    } else {
+      countEl.textContent = `0 matches for "${lastQuery}"`;
+    }
+  } else {
+    header.style.display = "none";
+  }
+}
+
+// ── RENDER RESULTS TO GRID CARD VIEW ─────────────────────────────────────────
+function renderGrid(items) {
+  const grid = document.getElementById("results-grid");
+  grid.innerHTML = "";
+  
+  if (items.length === 0) {
+    // Exact requested budget limit error message
+    grid.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1; padding: 50px 10px;">
+        <div class="empty-icon" style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
+        <h3 style="font-family: 'Syne', sans-serif; font-size: 1.1rem; color: var(--text); margin-bottom: 8px;">No products found within your budget range. Try increasing your maximum price.</h3>
+      </div>
+    `;
+    return;
+  }
+
+  items.forEach((item, i) => {
+    const delay = Math.min(i * 40, 400);
+    const rankClass = i === 0 ? "rank-1" : "";
+    
+    // Cheapest item highlighted with premium "Best Deal" badge
+    const rankBadge = i === 0 
+      ? `<div class="card-deal-badge" style="position: absolute; top: 8px; left: 8px; background: linear-gradient(135deg, var(--accent), #00c87a); color: #060912; font-family: 'Syne', sans-serif; font-size: 0.6rem; font-weight: 800; padding: 4px 8px; border-radius: 4px; letter-spacing: 0.04em; text-transform: uppercase; box-shadow: 0 0 10px rgba(0,229,160,0.4); z-index: 2;">Best Deal</div>` 
+      : "";
+      
+    const meta = PLATFORM_META[item.platform.toLowerCase()] || { color: "#666" };
+
+    const card = document.createElement("div");
+    card.className = `result-card ${rankClass}`;
+    card.style.animationDelay = `${delay}ms`;
+    card.onclick = () => window.open(item.url, "_blank");
+    card.innerHTML = `
+      <div class="card-image-wrap">
+        ${rankBadge}
+        ${item.image
+          ? `<img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'">`
+          : `<span style="font-size: 2.5rem">🛍️</span>`}
+      </div>
+      <div class="card-body">
+        <div class="card-platform">
+          <img class="platform-logo" src="${meta.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" alt=""/>
+          <span class="platform-fallback" style="display: none; width: 14px; height: 14px; border-radius: 50%; background: ${meta.color}; color: #fff; align-items: center; justify-content: center; font-size: 8px; font-weight: 800; flex-shrink: 0; line-height: 1; text-transform: uppercase;">${meta.label[0]}</span>
+          <span class="platform-name" style="color: ${meta.color}">${item.platform}</span>
+          <span style="font-size: 0.75rem; color: var(--gold); margin-left: auto; font-weight: 700;">⭐ ${item.rating}</span>
+        </div>
+        <div class="card-title">${item.title || "—"}</div>
+        <div class="card-footer" style="flex-wrap: wrap; gap: 4px;">
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <div style="display: flex; align-items: baseline; gap: 6px;">
+              <span class="card-price" style="font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; color: ${i === 0 ? 'var(--accent)' : 'var(--text)'};">${item.price_str}</span>
+              ${item.original_price_str ? `<span style="font-size: 0.75rem; text-decoration: line-through; color: var(--muted);">${item.original_price_str}</span>` : ""}
+            </div>
+            ${item.discount_pct ? `<span style="font-size: 0.7rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;">🔥 ${item.discount_pct}% OFF</span>` : ""}
+          </div>
+          <a class="card-link" href="${item.url}" target="_blank" onclick="event.stopPropagation()" title="Buy Now on ${item.platform}" style="width: auto; height: auto; padding: 6px 12px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.75rem; border-radius: 6px; letter-spacing: 0.02em; text-transform: uppercase;">Buy Now ↗</a>
+        </div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+// ── RENDER RESULTS TO TABLE VIEW ─────────────────────────────────────────────
+function renderTable(items) {
+  const tbody = document.getElementById("table-body");
+  tbody.innerHTML = "";
+  
+  if (items.length === 0) return;
+
+  items.forEach((item, i) => {
+    const meta = PLATFORM_META[item.platform.toLowerCase()] || { color: "#666" };
+    const tr = document.createElement("tr");
+    tr.style.cursor = "pointer";
+    tr.onclick = () => window.open(item.url, "_blank");
+    tr.innerHTML = `
+      <td class="rank-cell">${i === 0 ? "🥇" : i + 1}</td>
+      <td>
+        <span style="display: inline-flex; align-items: center; gap: 6px;">
+          <img src="${meta.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" alt="" style="width: 14px; height: 14px; border-radius: 50%; object-fit: contain; background: #fff; padding: 1px; flex-shrink: 0;"/>
+          <span class="platform-fallback" style="display: none; width: 14px; height: 14px; border-radius: 50%; background: ${meta.color}; color: #fff; align-items: center; justify-content: center; font-size: 8px; font-weight: 800; flex-shrink: 0; line-height: 1; text-transform: uppercase;">${meta.label[0]}</span>
+          ${item.platform}
+        </span>
+      </td>
+      <td style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.title || "—"}</td>
+      <td style="font-weight: 600; color: var(--gold);">⭐ ${item.rating}</td>
+      <td style="font-weight: 700; color: var(--accent);">🔥 ${item.discount_pct}% OFF</td>
+      <td style="font-family: 'Syne', sans-serif; font-weight: 700; color: ${i === 0 ? 'var(--accent)' : 'var(--text)'};">${item.price_str}</td>
+      <td><a href="${item.url}" target="_blank" onclick="event.stopPropagation()" style="color: var(--accent2); text-decoration: none; font-size: 0.82rem; font-weight: bold;">Buy Now ↗</a></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// ── CHEAPEST BANNER spotlight WITH "Best Deal" badge ─────────────────────────
+function showBanner(cheapest, all) {
+  const prices = all.filter(r => r.price).map(r => r.price);
+  const maxPrice = prices.length > 1 ? Math.max(...prices) : null;
+  const savings = maxPrice && cheapest.price ? Math.round(maxPrice - cheapest.price) : null;
+  const meta = PLATFORM_META[cheapest.platform.toLowerCase()] || { color: "#00e5a0" };
+
+  const banner = document.getElementById("cheapest-banner");
+  const card = document.getElementById("banner-card");
+  card.style.cursor = "pointer";
+  card.onclick = () => window.open(cheapest.url, "_blank");
+  card.innerHTML = `
+    <span class="banner-badge">🏆 Best Deal</span>
+    ${cheapest.image ? `<img class="banner-img" src="${cheapest.image}" onerror="this.style.display='none'" alt="">` : ""}
+    <div class="banner-info">
+      <div class="banner-platform" style="color: ${meta.color}; display: flex; align-items: center; gap: 6px;">
+        <img src="${meta.logo}" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" alt="" style="width: 16px; height: 16px; border-radius: 50%; object-fit: contain; background: #fff; padding: 1px; flex-shrink: 0;"/>
+        <span class="platform-fallback" style="display: none; width: 16px; height: 16px; border-radius: 50%; background: ${meta.color}; color: #fff; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; flex-shrink: 0; line-height: 1; text-transform: uppercase;">${meta.label[0]}</span>
+        ${cheapest.platform}
+      </div>
+      <div class="banner-title">${cheapest.title || "—"}</div>
+      ${savings ? `<div class="banner-savings">Save <strong>₹${savings.toLocaleString()}</strong> vs highest price</div>` : ""}
+    </div>
+    <div class="banner-price">${cheapest.price_str}</div>
+    <a class="banner-cta" href="${cheapest.url}" target="_blank" onclick="event.stopPropagation()">Buy Now ↗</a>`;
+  banner.style.display = "block";
+}
+
+function hideBanner() {
+  document.getElementById("cheapest-banner").style.display = "none";
+}
+
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function clearResults() {
+  document.getElementById("results-grid").innerHTML = "";
+  document.getElementById("table-body").innerHTML = "";
+  document.getElementById("results-header").style.display = "none";
+  currentResults = [];
+}
+
+function setStatus(type, msg) {
+  const bar = document.getElementById("status-bar");
+  if (type === "spinner") {
+    bar.innerHTML = `<div class="spinner"></div><span>${msg}</span>`;
+  } else {
+    bar.innerHTML = `<div class="pulse-dot"></div><span>${msg}</span>`;
+  }
+}
+
+function setView(view) {
+  currentView = view;
+  const grid = document.getElementById("results-grid");
+  const table = document.getElementById("results-table");
+  const gridBtn = document.getElementById("grid-btn");
+  const tableBtn = document.getElementById("table-btn");
+
+  if (view === "grid") {
+    grid.style.display = "grid";
+    table.classList.remove("visible");
+    gridBtn.classList.add("active");
+    tableBtn.classList.remove("active");
+  } else {
+    grid.style.display = "none";
+    table.classList.add("visible");
+    tableBtn.classList.add("active");
+    gridBtn.classList.remove("active");
+  }
+}
+
+function showToast(msg) {
+  const t = document.createElement("div");
+  t.className = "toast";
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2800);
+}
+
+init();
+</script>
+</body>
+</html>
